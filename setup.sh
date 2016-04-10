@@ -23,7 +23,7 @@ cd /var/www/html/$1
 chmod -R 777 public/upload
 chmod -R 777 public/files
 
-cd public && bower install && [ -d kcfinder ] || git clone git@github.com:sunhater/kcfinder.git
+cd public && bower install --allow-root && [ -d kcfinder ] || git clone git@github.com:sunhater/kcfinder.git
 sed -i  "s/'disabled' => true/'disabled' => false/g" kcfinder/conf/config.php
 sed -i  's/"upload"/"\/upload"/g' kcfinder/conf/config.php
 [ -d bower_components/ckeditor/plugins/pbckcode ] || git clone git@github.com:prbaron/pbckcode.git bower_components/ckeditor/plugins/pbckcode
