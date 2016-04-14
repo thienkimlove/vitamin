@@ -22,6 +22,21 @@
                 {!! Form::text('name', null, ['class' => 'form-control']) !!}
             </div>
 
+                <div class="form-group">
+                    {!! Form::label('seo_name', 'SEO Title') !!}
+                    {!! Form::text('seo_name', null, ['class' => 'form-control']) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('desc', 'SEO Description') !!}
+                    {!! Form::textarea('desc', null, ['class' => 'form-control']) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('keywords', 'SEO Keywords') !!}
+                    {!! Form::textarea('keywords', null, ['class' => 'form-control']) !!}
+                </div>
+
             <div class="form-group">
                 {!! Form::label('Parent', 'Parent') !!}
                 {!! Form::select('parent_id', $parents, null, ['class' => 'form-control']) !!}

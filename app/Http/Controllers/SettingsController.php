@@ -16,41 +16,7 @@ class SettingsController extends AdminController {
     {
         $settings = Setting::latest('updated_at')->paginate(10);
         return view('admin.setting.index', compact('settings'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        return view('admin.setting.form');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param QuestionRequest|SettingRequest $request
-     * @return Response
-     */
-    public function store(SettingRequest $request)
-    {
-        Setting::create($request->all());
-        flash('Create setting success!', 'success');
-        return redirect('admin/settings');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function show($id)
-    {
-        //
-    }
+    }  
 
     /**
      * Show the form for editing the specified resource.
@@ -78,18 +44,5 @@ class SettingsController extends AdminController {
         flash('Create setting success!', 'success');
         return redirect('admin/settings');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function destroy($id)
-    {
-        $setting = Setting::findOrFail($id);
-        $setting->delete();
-        flash('Success deleted setting!');
-        return redirect('admin/settings');
-    }
+    
 }

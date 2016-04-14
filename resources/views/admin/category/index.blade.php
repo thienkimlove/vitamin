@@ -17,7 +17,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>
-                                <th>Is Parent</th>
+                                <th>Is Child</th>
                                 <th>Action</th>
                             </tr>
                             </thead>

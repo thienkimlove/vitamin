@@ -25,6 +25,7 @@ class CreatePostTables extends Migration
                 ->onDelete('cascade');
             $table->string('image')->nullable()->default(null);
             $table->boolean('status')->default(true);
+            $table->string('seo_title')->nullable();
             $table->timestamps();
         });
     }

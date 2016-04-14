@@ -19,8 +19,11 @@ class Category extends Model implements SluggableInterface
 
     protected $fillable = [
         'name',
+        'seo_name',
         'parent_id',
         'slug',
+        'desc',
+        'keywords',
     ];
 
     /**
@@ -47,7 +50,11 @@ class Category extends Model implements SluggableInterface
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function posts()
-    {
-        return $this->hasMany('App\Post')->where('status', true);
+    {        
+        if ($this->subCategories->count() == 0) {
+            return $this->hasMany('App\Post')->where('status', true);
+        } else {
+            return $this->hasMany('App\Post')->whereIn('category_id', $this->subCategories->lists('id')->all())->where('status', true);
+        }          
     }
 }

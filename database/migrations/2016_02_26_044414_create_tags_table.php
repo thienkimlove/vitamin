@@ -16,6 +16,9 @@ class CreateTagsTable extends Migration {
         {
             $table->increments('id');
             $table->string('name');
+            $table->string('seo_name');
+            $table->text('desc');
+            $table->text('keywords');
             $table->string('slug', env('TAG_SLUG_URL_LENGTH'))->unique();
             $table->timestamps();
         });
@@ -25,7 +28,7 @@ class CreateTagsTable extends Migration {
             $tale->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
             $tale->integer('tag_id')->unsigned()->index();
             $tale->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
-        });
+        });        
     }
 
     /**
@@ -35,7 +38,7 @@ class CreateTagsTable extends Migration {
      */
     public function down()
     {
-        Schema::drop('post_tag');
+        Schema::drop('post_tag');        
         Schema::drop('tags');
     }
 

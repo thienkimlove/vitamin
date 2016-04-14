@@ -24,7 +24,6 @@ class SettingRequest extends Request
     public function rules()
     {
         return [
-            'name' => 'required',
             'value' => 'required'
         ];
     }

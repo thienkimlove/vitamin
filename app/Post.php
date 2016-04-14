@@ -23,7 +23,8 @@ class Post extends Model implements SluggableInterface
         'desc',
         'content',
         'image',
-        'status'
+        'status',
+        'seo_title'
     ];
 
     /**
@@ -46,6 +47,11 @@ class Post extends Model implements SluggableInterface
         if (strlen($tag) > 2) {
             $query->where('title', 'LIKE', '%'.$tag.'%');
         }
+    }
+
+    public function scopePublish($query)
+    {
+        $query->where('status', true);
     }
 
     /**

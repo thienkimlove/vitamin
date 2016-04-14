@@ -16,6 +16,9 @@ class CreateCategoriesTable extends Migration {
         {
             $table->increments('id');
             $table->string('name', 255);
+            $table->string('seo_name', 255);
+            $table->text('desc');
+            $table->text('keywords');
             $table->string('slug', env('CATEGORY_SLUG_URL_LENGTH'))->unique();
             $table->integer('parent_id')->nullable()->index();
             $table->timestamps();

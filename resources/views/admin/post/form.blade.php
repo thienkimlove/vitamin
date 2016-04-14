@@ -26,6 +26,11 @@
                 {!! Form::text('title', null, ['class' => 'form-control']) !!}
             </div>
 
+                <div class="form-group">
+                    {!! Form::label('seo_title', 'SEO Title') !!}
+                    {!! Form::text('seo_title', null, ['class' => 'form-control']) !!}
+                </div>
+
             <div class="form-group">
                 {!! Form::label('category_id', 'Category') !!}
                 {!! Form::select('category_id', $categories, null, ['class' => 'form-control']) !!}
@@ -35,7 +40,6 @@
                 {!! Form::label('desc', 'Short Description') !!}
                 {!! Form::textarea('desc', null, ['class' => 'form-control']) !!}
             </div>
-
 
             <div class="form-group">
                 {!! Form::label('content', 'Content') !!}

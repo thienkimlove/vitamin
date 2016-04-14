@@ -56,14 +56,78 @@
                 </li>
 
                 <li>
+                    <a><i class="fa fa-files-o fa-fw"></i>Question<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+
+                        <li>
+                            <a href="{{url('admin/questions')}}">List</a>
+                        </li>
+                        <li>
+                            <a href="{{url('admin/questions/create')}}">Add</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+
+                <li>
+                    <a><i class="fa fa-files-o fa-fw"></i>Video<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+
+                        <li>
+                            <a href="{{url('admin/videos')}}">List</a>
+                        </li>
+                        <li>
+                            <a href="{{url('admin/videos/create')}}">Add</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+
+                <li>
+                    <a><i class="fa fa-files-o fa-fw"></i>Product<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+
+                        <li>
+                            <a href="{{url('admin/products')}}">List</a>
+                        </li>
+                        <li>
+                            <a href="{{url('admin/products/create')}}">Add</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+
+                <li>
+                    <a><i class="fa fa-files-o fa-fw"></i>Delivery<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+
+                        <li>
+                            <a href="{{url('admin/deliveries')}}">List</a>
+                        </li>
+                        <li>
+                            <a href="{{url('admin/deliveries/create')}}">Add</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+
+                <li>
+                    <a><i class="fa fa-files-o fa-fw"></i>Tags<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+
+                        <li>
+                            <a href="{{url('admin/tags')}}">List</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+
+                <li>
                     <a><i class="fa fa-files-o fa-fw"></i>Settings<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
 
                         <li>
                             <a href="{{url('admin/settings')}}">List</a>
-                        </li>
-                        <li>
-                            <a href="{{url('admin/settings/create')}}">Add</a>
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->
