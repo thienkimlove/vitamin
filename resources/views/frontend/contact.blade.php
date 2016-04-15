@@ -5,7 +5,7 @@
         <div class="container">
             <div class="contentLeft">
                 <ul class="breadCrumb clearFix">
-                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="{{url('/')}}">Trang chủ</a></li>
                     <li class="active">Liên hệ</li>
                 </ul>
                 <div class="boxContact">
@@ -47,74 +47,7 @@
                     </div>
                 </div>
             </div>
-            <div class="contentRight">
-                <div class="boxVideo">
-                    <h3 class="globalTitle">
-                        <a href="#">Góc Video</a>
-                    </h3>
-                    <div class="content">
-                        <iframe width="100%" height="250" src="https://www.youtube.com/embed/4QEmJ3sPHIg" frameborder="0" allowfullscreen></iframe>
-                        <ul class="listVideo">
-                            <li><a href="#">Giải đáp các thắc mắc của Mẹ trong quá  trình mang thai và chăm </a></li>
-                            <li><a href="#">Giải đáp các thắc mắc của Mẹ trong quá  trình mang thai và chăm </a></li>
-                            <li><a href="#">Giải đáp các thắc mắc của Mẹ trong quá  trình mang thai và chăm </a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="boxSale">
-                    <h3 class="globalTitle">
-                        <a href="#">Cộng đồng mẹ thông thái</a>
-                    </h3>
-                    <div class="Social">
-                        <div class="fb-page" data-href="https://www.facebook.com/tuelinh.vn" data-width="100%" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/tuelinh.vn"><a href="https://www.facebook.com/tuelinh.vn">Tuệ Linh</a></blockquote></div></div>
-                    </div>
-                </div>
-                <!-- /endSale -->
-                <div class="boxHot clearFix sideBar">
-                    <h3 class="globalTitle"><a href="#">Tin nổi bật</a></h3>
-                    <div class="item clearFix">
-                        <a href="#" class="thumb">
-                            <img src="imgs/temp/hot01.jpg" alt="hot" width="100" height="80">
-                        </a>
-                        <h4>
-                            <a href="#">Probiotics (men vi sinh) là những vi khuẩn có lợi cho đường ruột</a>
-                        </h4>
-                    </div>
-                    <div class="item clearFix">
-                        <a href="#" class="thumb">
-                            <img src="imgs/temp/hot01.jpg" alt="hot" width="100" height="80">
-                        </a>
-                        <h4>
-                            <a href="#">Probiotics (men vi sinh) là những vi khuẩn có lợi cho đường ruột</a>
-                        </h4>
-                    </div>
-                    <div class="item clearFix">
-                        <a href="#" class="thumb">
-                            <img src="imgs/temp/hot01.jpg" alt="hot" width="100" height="80">
-                        </a>
-                        <h4>
-                            <a href="#">Probiotics (men vi sinh) là những vi khuẩn có lợi cho đường ruột</a>
-                        </h4>
-                    </div>
-                    <div class="item clearFix">
-                        <a href="#" class="thumb">
-                            <img src="imgs/temp/hot01.jpg" alt="hot" width="100" height="80">
-                        </a>
-                        <h4>
-                            <a href="#">Probiotics (men vi sinh) là những vi khuẩn có lợi cho đường ruột</a>
-                        </h4>
-                    </div>
-                    <div class="item clearFix">
-                        <a href="#" class="thumb">
-                            <img src="imgs/temp/hot01.jpg" alt="hot" width="100" height="80">
-                        </a>
-                        <h4>
-                            <a href="#">Probiotics (men vi sinh) là những vi khuẩn có lợi cho đường ruột</a>
-                        </h4>
-                    </div>
-                </div>
-                <!-- /endHot -->
-            </div>
+            @include('frontend.right')
         </div>
     </section>
 @endsection

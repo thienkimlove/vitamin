@@ -19,10 +19,12 @@
                             <thead>
                             <tr>
                                 <th>#</th>
+                                <th>Tieu de</th>
                                 <th>Nguoi hoi</th>
                                 <th>Câu hỏi</th>
                                 <th>Nguoi tra loi</th>
                                 <th>Câu trả lời</th>
+                                <th>Publish</th>
                                 <th>Hành động</th>
                             </tr>
                             </thead>
@@ -30,10 +32,12 @@
                             @foreach($questions as $question)
                                 <tr>
                                     <td>{{$question->id}}</td>
+                                    <td>{{$question->title}}</td>
                                     <td>{{$question->ask_person}}</td>
                                     <td>{{str_limit($question->question, 40)}}</td>
                                     <td>{{$question->answer_person}}</td>
                                     <td>{{ str_limit($question->answer, 40) }}</td>
+                                    <td>{{ ($question->status) ? 'Yes' : 'No'  }}</td>
                                     <td>
                                         <button id-attr="{{$question->id}}" class="btn btn-primary btn-sm edit-question"  type="button">Sửa</button>
                                         <br>

@@ -18,9 +18,11 @@ class CreateVideosTable extends Migration
             $table->string('title');
             $table->string('seo_title');
             $table->string('slug')->unique();
-            $table->string('image');   
+            $table->string('image');
+            $table->string('url');
             $table->text('desc');
             $table->text('keywords');
+            $table->integer('views')->default(0);
             $table->timestamps();
 
         });

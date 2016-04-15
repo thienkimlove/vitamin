@@ -18,21 +18,19 @@
         </h1>
         <ul id="globalNav" class="pc">
             <li><a href="{{url('/')}}" class="active">Trang chủ</a></li>
-
-            @foreach ($headerCategories->shift() as $headerCategory)
-                <li>
-                    <a href="{{url($headerCategory->slug)}}">{{$headerCategory->name}}</a>
-                    @if ($headerCategory->subCategories->count() > 0)
-                        <ul>
-                            @foreach ($headerCategory->subCategories as $childCategory)
-                                <li><a href="{{url($childCategory->slug)}}">{{$childCategory->name}}</a></li>
-                            @endforeach
-                        </ul>
-                    @endif
-                </li>
-            @endforeach
-
-
+            @if ($firstCategory)
+                    <li>
+                        <a href="{{url($firstCategory->slug)}}">{{$firstCategory->name}}</a>
+                        @if ($firstCategory->subCategories->count() > 0)
+                            <ul>
+                                @foreach ($firstCategory->subCategories as $childCategory)
+                                    <li><a href="{{url($childCategory->slug)}}">{{$childCategory->name}}</a></li>
+                                @endforeach
+                            </ul>
+                        @endif
+                    </li>
+            @endif
+            @if ($menuProducts->count() > 0)
             <li>
                 <a href="#">Vitamin C</a>
                 <ul>
@@ -41,20 +39,21 @@
                     @endforeach
                 </ul>
             </li>
-
-
-            @foreach ($headerCategories->shift() as $headerCategory)
-                <li>
-                    <a href="{{url($headerCategory->slug)}}">{{$headerCategory->name}}</a>
-                    @if ($headerCategory->subCategories->count() > 0)
-                        <ul>
-                            @foreach ($headerCategory->subCategories as $childCategory)
-                                <li><a href="{{url($childCategory->slug)}}">{{$childCategory->name}}</a></li>
-                            @endforeach
-                        </ul>
-                    @endif
-                </li>
-            @endforeach
+            @endif
+            @if ($headerCategories->count() > 0)
+                @foreach ($headerCategories as $headerCategory)
+                    <li>
+                        <a href="{{url($headerCategory->slug)}}">{{$headerCategory->name}}</a>
+                        @if ($headerCategory->subCategories->count() > 0)
+                            <ul>
+                                @foreach ($headerCategory->subCategories as $childCategory)
+                                    <li><a href="{{url($childCategory->slug)}}">{{$childCategory->name}}</a></li>
+                                @endforeach
+                            </ul>
+                        @endif
+                    </li>
+                @endforeach
+            @endif
 
 
             <li><a href="{{url('video')}}">Videos</a></li>

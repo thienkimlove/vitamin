@@ -9,15 +9,16 @@ class Question extends Model implements SluggableInterface {
     use SluggableTrait;
 
     protected $sluggable = array(
-        'build_from' => 'question',
+        'build_from' => 'title',
         'save_to'    => 'slug',
         'unique'          => true,
         'on_update'       => true,
     );
 
     protected $fillable = [
+        'title',
         'question', 
-        'seo_question',
+        'seo_title',
         'desc',
         'keywords',
         'answer', 
@@ -27,7 +28,16 @@ class Question extends Model implements SluggableInterface {
         'ask_phone',
         'ask_email',
         'ask_address',
-        'image'
+        'image',
+        'status'
     ];
+
+    protected $dates = ['created_at', 'updated_at'];
+
+
+    public function scopePublish($query)
+    {
+        $query->where('status', true);
+    }
 
 }

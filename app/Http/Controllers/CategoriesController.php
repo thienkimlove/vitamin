@@ -33,6 +33,9 @@ class CategoriesController extends AdminController
     {
         Category::create([
             'name' => $request->input('name'),
+            'desc' => $request->input('desc'),
+            'keywords' => $request->input('keywords'),
+            'seo_name' => $request->input('seo_name'),
             'parent_id' => ($request->input('parent_id') == 0) ? null : $request->input('parent_id'),
         ]);
 
@@ -65,6 +68,9 @@ class CategoriesController extends AdminController
 
         $category->update([
             'name' => $request->input('name'),
+            'desc' => $request->input('desc'),
+            'keywords' => $request->input('keywords'),
+            'seo_name' => $request->input('seo_name'),
             'parent_id' => ($request->input('parent_id') == 0) ? null : $request->input('parent_id'),
         ]);
 

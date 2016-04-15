@@ -22,7 +22,8 @@ class Video extends Model implements SluggableInterface {
         'image',
         'seo_title',
         'desc',
-        'keywords'
+        'keywords',
+        'views'
     ];
 
 

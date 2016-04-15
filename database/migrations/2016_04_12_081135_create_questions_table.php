@@ -15,10 +15,11 @@ class CreateQuestionsTable extends Migration {
         Schema::create('questions', function(Blueprint $table)
         {
             $table->increments('id');
+            $table->string('title');
             $table->text('question');
-            $table->string('seo_question');
-            $table->string('desc');
-            $table->string('keywords');
+            $table->string('seo_title');
+            $table->text('desc');
+            $table->text('keywords');
             $table->string('slug', 200)->unique();
             $table->text('answer');
             $table->string('ask_person');
@@ -27,6 +28,7 @@ class CreateQuestionsTable extends Migration {
             $table->string('ask_phone')->nullable();
             $table->string('ask_email')->nullable();
             $table->string('image');
+            $table->boolean('status')->default(false);
             $table->timestamps();
         });
     }

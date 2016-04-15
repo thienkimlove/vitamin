@@ -37,6 +37,7 @@ class QuestionsController extends AdminController {
 	{
 		$data = $request->all();
 		$data['image'] = ($request->file('image') && $request->file('image')->isValid()) ? $this->saveImage($request->file('image')) : '';
+		$data['status'] = ($request->input('status') == 'on') ? true : false;
 		Question::create($data);
         flash('Them moi hoi dap thanh cong!', 'success');
         return redirect('admin/questions');
@@ -79,6 +80,7 @@ class QuestionsController extends AdminController {
 		if ($request->file('image') && $request->file('image')->isValid()) {
 			$data['image'] = $this->saveImage($request->file('image'), $question->image);
 		}
+		$data['status'] = ($request->input('status') == 'on') ? true : false;
         $question->update($data);
         flash('Sua hoi đáp thành công!', 'success');
         return redirect('admin/questions');

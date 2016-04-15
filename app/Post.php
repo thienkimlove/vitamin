@@ -24,8 +24,11 @@ class Post extends Model implements SluggableInterface
         'content',
         'image',
         'status',
-        'seo_title'
+        'seo_title',
+        'views'
     ];
+
+    protected $dates = ['created_at', 'updated_at'];
 
     /**
      * post belong to one category.

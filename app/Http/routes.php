@@ -13,6 +13,7 @@
 
 use App\Category;
 use App\Post;
+use App\Product;
 use App\Question;
 use App\Setting;
 use App\Video;
@@ -58,9 +59,13 @@ Route::group(['middleware' => 'web'], function () {
     Route::resource('admin/products', 'ProductsController');
     Route::resource('admin/deliveries', 'DeliveriesController');
 });
-$settings = Setting::lists('value', 'name')->all();
-Route::get('/', function () use($settings) {
-    return view('frontend.index')->with([
+
+Route::get('/', function () {
+    $settings = Setting::lists('value', 'name')->all();
+
+    $latestNews = Post::publish()->latest('updated_at')->limit(3)->get();
+    $latestQuestions = Question::publish()->latest('updated_at')->limit(7)->get();
+    return view('frontend.index', compact('latestNews', 'latestQuestions'))->with([
         'meta_title' =>  $settings['META_INDEX_TITLE'],
         'meta_desc' =>  $settings['META_INDEX_DESC'],
         'meta_keywords' =>  $settings['META_INDEX_KEYWORDS'],
@@ -68,7 +73,8 @@ Route::get('/', function () use($settings) {
 });
 
 
-Route::get('lien-he', function() use($settings) {
+Route::get('lien-he', function() {
+    $settings = Setting::lists('value', 'name')->all();
     return view('frontend.contact')->with([
         'meta_title' =>  $settings['META_CONTACT_TITLE'],
         'meta_desc' =>  $settings['META_CONTACT_DESC'],
@@ -76,34 +82,75 @@ Route::get('lien-he', function() use($settings) {
     ]);
 });
 
-Route::get('video/{value?}', function($value = null) use($settings) {
-    $video = null;
+Route::get('video/{value?}', function($value = null)  {
+    $settings = Setting::lists('value', 'name')->all();
+    $mainVideo = null;
     $meta_title = $meta_desc = $meta_keywords =  null;
     if ($value) {
-        $video = Video::where('slug', $value)->first();
-        $meta_title = ($video->seo_title) ? $video->seo_title : $video->title;
-        $meta_desc = $video->desc;
-        $meta_keywords = $video->keywords;
+        $mainVideo = Video::where('slug', $value)->first();
+        $meta_title = ($mainVideo->seo_title) ? $mainVideo->seo_title : $mainVideo->title;
+        $meta_desc = $mainVideo->desc;
+        $meta_keywords = $mainVideo->keywords;
+        $mainVideo->update(['views' => (int) $mainVideo->views + 1]);
     }
-    $videos = Video::paginate(10);
-    return view('frontend.video', compact('videos', 'video'))->with([
+    $videos = Video::paginate(6);
+    return view('frontend.video', compact('videos', 'mainVideo'))->with([
         'meta_title' => ($meta_title) ? $meta_title : $settings['META_VIDEO_TITLE'],
         'meta_desc' => ($meta_desc) ? $meta_desc : $settings['META_VIDEO_DESC'],
         'meta_keywords' => ($meta_keywords) ? $meta_keywords : $settings['META_VIDEO_KEYWORDS'],
     ]);
 });
 
-Route::get('cau-hoi-thuong-gap/{value?}', function($value = null) use($settings) {
-    $question = null;
+Route::post('save_question', function(\Illuminate\Http\Request $request){
+
+    if ($request->input('question')) {
+        Question::create($request->all());
+    }
+
+    return redirect('cau-hoi-thuong-gap');
+});
+
+Route::get('product/{value}', function($value)  {
+    
+    $latestNews = Post::publish()->latest('updated_at')->limit(6)->get();
+    
+    $mainProduct = Product::where('slug', $value)->first();
+
+    $product_tag = $mainProduct->tags->lists('id')->all();
+
+    $related = Post::publish()
+        ->whereHas('tags', function($q) use ($product_tag){
+            $q->whereIn('id', $product_tag);
+        })
+        ->latest('updated_at')
+        ->limit(5)
+        ->get();
+
+    $meta_title = ($mainProduct->seo_title) ? $mainProduct->seo_title : $mainProduct->title;
+    $meta_desc = $mainProduct->desc;
+    $meta_keywords = $mainProduct->keywords;
+    
+    
+   
+    return view('frontend.product', compact('mainProduct', 'latestNews', 'related'))->with([
+        'meta_title' => $meta_title,
+        'meta_desc' => $meta_desc,
+        'meta_keywords' => $meta_keywords,
+    ]);
+});
+
+Route::get('cau-hoi-thuong-gap/{value?}', function($value = null) {
+    $settings = Setting::lists('value', 'name')->all();
+    $mainQuestion = null;
     $meta_title = $meta_desc = $meta_keywords =  null;
     if ($value) {
-        $question = Question::where('slug', $value)->first();
-        $meta_title = ($question->seo_question) ? $question->seo_question : $question->question;
-        $meta_desc = $question->desc;
-        $meta_keywords = $question->keywords;
+        $mainQuestion = Question::where('slug', $value)->first();
+        $meta_title = ($mainQuestion->seo_title) ? $mainQuestion->seo_title : $mainQuestion->title;
+        $meta_desc = $mainQuestion->desc;
+        $meta_keywords = $mainQuestion->keywords;        
     }
-    $questions = Question::paginate(10);
-    return view('frontend.question', compact('questions', 'question'))->with([
+    $questions = Question::publish()->paginate(10);
+    return view('frontend.question', compact('questions', 'mainQuestion'))->with([
         'meta_title' => ($meta_title) ? $meta_title : $settings['META_QUESTION_TITLE'],
         'meta_desc' => ($meta_desc) ? $meta_desc : $settings['META_QUESTION_DESC'],
         'meta_keywords' => ($meta_keywords) ? $meta_keywords : $settings['META_QUESTION_KEYWORDS'],
@@ -111,11 +158,12 @@ Route::get('cau-hoi-thuong-gap/{value?}', function($value = null) use($settings)
 });
 
 
-Route::get('{value}', function ($value) use($settings) {
-
-    if (preg_match('/([a-z0-9\-]+)\.html/', $value, $matches)) {
-        
+Route::get('{value}', function ($value)  {
+    $settings = Setting::lists('value', 'name')->all();
+    if (preg_match('/([a-z0-9\-]+)\.html/', $value, $matches)) {        
         $post = Post::where('slug', $matches[1])->first();
+        
+        $post->update(['views' => (int) $post->views + 1]);
 
         return view('frontend.post', compact('post'))->with([
             'meta_title' => ($post->seo_title) ? $post->seo_title : $post->title,
@@ -124,24 +172,26 @@ Route::get('{value}', function ($value) use($settings) {
         ]);
     } else {
         $category = Category::where('slug', $value)->first();
-
    
         if ($category->subCategories->count() == 0) {
             //child categories
             $posts = Post::publish()
                 ->where('category_id', $category->id)
+                ->latest('updated_at')
                 ->paginate(10);
 
         } else {       
             //parent categories
             $posts = Post::publish()
                 ->whereIn('category_id', $category->subCategories->lists('id')->all())
+                ->latest('updated_at')
                 ->paginate(10);
 
         }
+        $featurePost = $posts->shift();
 
         return view('frontend.category', compact(
-            'category', 'posts'
+            'category', 'posts', 'featurePost'
         ))->with([
             'meta_title' => ($category->seo_name) ?  $category->seo_name : $category->name,
             'meta_desc' =>  ($category->desc)? $category->desc : $settings['META_CATEGORY_DESC'],

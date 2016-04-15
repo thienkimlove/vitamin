@@ -26,6 +26,7 @@ class CreatePostTables extends Migration
             $table->string('image')->nullable()->default(null);
             $table->boolean('status')->default(true);
             $table->string('seo_title')->nullable();
+            $table->integer('views')->default(0);
             $table->timestamps();
         });
     }

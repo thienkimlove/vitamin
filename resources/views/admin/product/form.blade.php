@@ -59,7 +59,7 @@
 
             <div class="form-group">
                 {!! Form::label('image', 'Image') !!}
-                @if ($post->image)
+                @if ($product->image)
                     <img src="{{url('img/cache/120x120/' . $product->image)}}" />
                     <hr>
                 @endif

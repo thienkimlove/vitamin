@@ -28,9 +28,15 @@
 
 
             <div class="form-group">
-                {!! Form::label('title', 'Tiêu đề') !!}
+                {!! Form::label('title', 'Title') !!}
                 {!! Form::text('title', null, ['class' => 'form-control']) !!}
             </div>
+
+
+                <div class="form-group">
+                    {!! Form::label('seo_title', 'SEO Title') !!}
+                    {!! Form::text('seo_title', null, ['class' => 'form-control']) !!}
+                </div>
 
                 <div class="form-group">
                         {!! Form::label('url', 'Media URL') !!}
@@ -38,22 +44,25 @@
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('desc', 'Mo ta Media') !!}
+                    {!! Form::label('desc', 'SEO Description') !!}
                     {!! Form::textarea('desc', null, ['class' => 'form-control']) !!}
                 </div>
 
 
-
                 <div class="form-group">
-                    {!! Form::label('is_video', 'Is Hot?') !!}
-                    {!! Form::checkbox('is_video', null, null) !!}
+                    {!! Form::label('keywords', 'SEO Keywords') !!}
+                    {!! Form::textarea('keywords', null, ['class' => 'form-control']) !!}
                 </div>
 
-            <div class="form-group">
+
+
+
+                <div class="form-group">
                 {!! Form::submit('Save', ['class' => 'btn btn-primary form-control']) !!}
             </div>
             {!! Form::close() !!}
-            @include('errors.list')
+
+            @include('admin.list')
 
         </div>
     </div>

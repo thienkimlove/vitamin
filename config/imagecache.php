@@ -57,6 +57,24 @@ return array(
         '120x120' => function($image) {
             return $image->fit(120, 120);
         },
+        '100x80' => function($image) {
+            return $image->fit(100, 80);
+        },
+        '130x80' => function($image) {
+            return $image->fit(130, 80);
+        },
+
+        '303x130' => function($image) {
+            return $image->fit(303, 130);
+        },
+
+        '400x289' => function($image) {
+            return $image->fit(400, 289);
+        },
+
+        '320x180' => function($image) {
+            return $image->fit(320, 180);
+        },
     ),
 
     /*
