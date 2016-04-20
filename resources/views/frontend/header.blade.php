@@ -51,6 +51,8 @@
         <a href="#" title="Menu" class="sp btnMenu" id="btnMenu">Menu</a>
     </div>
 </header>
+
+@if (isset($page) && $page == 'index')
 <!-- /endHeader -->
 <section class="boxBanner">
     <div class="boxSlider">
@@ -69,3 +71,22 @@
     </div>
     <!--//box-Banner-->
 </section>
+@else
+    <section class="boxBanner">
+        <div class="boxSlider">
+            <div class="owl-carousel" id="slideHomepage">
+                <div class="item">
+                    <a class="thumb" href="" title="">
+                        <img src="{{url('frontend/imgs/temp/banner01.jpg')}}"/>
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="thumb" href="" title="">
+                        <img src="{{url('frontend/imgs/temp/banner01.jpg')}}"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--//box-Banner-->
+    </section>
+@endif

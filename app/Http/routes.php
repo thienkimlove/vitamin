@@ -61,11 +61,13 @@ Route::group(['middleware' => 'web'], function () {
 });
 
 Route::get('/', function () {
+
+    $page = 'index';
     $settings = Setting::lists('value', 'name')->all();
 
     $latestNews = Post::publish()->latest('updated_at')->limit(3)->get();
     $latestQuestions = Question::publish()->latest('updated_at')->limit(7)->get();
-    return view('frontend.index', compact('latestNews', 'latestQuestions'))->with([
+    return view('frontend.index', compact('latestNews', 'latestQuestions', 'page'))->with([
         'meta_title' =>  $settings['META_INDEX_TITLE'],
         'meta_desc' =>  $settings['META_INDEX_DESC'],
         'meta_keywords' =>  $settings['META_INDEX_KEYWORDS'],
@@ -91,7 +93,7 @@ Route::get('video/{value?}', function($value = null)  {
     if ($videos->count() > 0) {
         $mainVideo = $videos->first();
     }
-    
+
     if ($value) {
         $mainVideo = Video::where('slug', $value)->first();
         $meta_title = ($mainVideo->seo_title) ? $mainVideo->seo_title : $mainVideo->title;
