@@ -30,15 +30,9 @@ class ViewComposerProvider extends ServiceProvider
         view()->composer('example.composer', function ($view) {
             $view->with('latestPosts',  Post::latest()->limit(6)->get());
         });
-        view()->composer('frontend.header', function ($view) {
-            $headerCategories = Category::whereNull('parent_id')->get();
-            $firstCategory = null;
-            if ($headerCategories->count() > 0) {
-                $firstCategory = $headerCategories->shift();
-            }
-            $view->with('headerCategories',  $headerCategories);
-            $view->with('menuProducts',  Product::all());
-            $view->with('firstCategory', $firstCategory);
+        view()->composer('frontend.header', function ($view) {          
+            $view->with('headerCategories',  Category::whereNull('parent_id')->get());
+            $view->with('menuProducts',  Product::all());           
         });
 
         view()->composer('frontend.right', function ($view) {            

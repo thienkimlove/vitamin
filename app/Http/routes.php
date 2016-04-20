@@ -86,6 +86,12 @@ Route::get('video/{value?}', function($value = null)  {
     $settings = Setting::lists('value', 'name')->all();
     $mainVideo = null;
     $meta_title = $meta_desc = $meta_keywords =  null;
+    $videos = Video::paginate(6);
+
+    if ($videos->count() > 0) {
+        $mainVideo = $videos->first();
+    }
+    
     if ($value) {
         $mainVideo = Video::where('slug', $value)->first();
         $meta_title = ($mainVideo->seo_title) ? $mainVideo->seo_title : $mainVideo->title;
@@ -93,7 +99,6 @@ Route::get('video/{value?}', function($value = null)  {
         $meta_keywords = $mainVideo->keywords;
         $mainVideo->update(['views' => (int) $mainVideo->views + 1]);
     }
-    $videos = Video::paginate(6);
     return view('frontend.video', compact('videos', 'mainVideo'))->with([
         'meta_title' => ($meta_title) ? $meta_title : $settings['META_VIDEO_TITLE'],
         'meta_desc' => ($meta_desc) ? $meta_desc : $settings['META_VIDEO_DESC'],

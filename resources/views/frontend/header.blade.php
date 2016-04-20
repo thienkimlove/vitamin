@@ -18,21 +18,9 @@
         </h1>
         <ul id="globalNav" class="pc">
             <li><a href="{{url('/')}}" class="active">Trang chủ</a></li>
-            @if ($firstCategory)
-                    <li>
-                        <a href="{{url($firstCategory->slug)}}">{{$firstCategory->name}}</a>
-                        @if ($firstCategory->subCategories->count() > 0)
-                            <ul>
-                                @foreach ($firstCategory->subCategories as $childCategory)
-                                    <li><a href="{{url($childCategory->slug)}}">{{$childCategory->name}}</a></li>
-                                @endforeach
-                            </ul>
-                        @endif
-                    </li>
-            @endif
             @if ($menuProducts->count() > 0)
             <li>
-                <a href="#">Vitamin C</a>
+                <a href="#">Vitamin C Tự nhiên</a>
                 <ul>
                     @foreach ($menuProducts as $product)
                     <li><a href="{{url('product/'.$product->slug)}}">{{$product->title}}</a></li>
