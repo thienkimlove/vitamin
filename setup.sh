@@ -26,7 +26,6 @@ chmod -R 777 public/files
 cd public && bower install --allow-root && [ -d kcfinder ] || git clone git@github.com:sunhater/kcfinder.git
 sed -i  "s/'disabled' => true/'disabled' => false/g" kcfinder/conf/config.php
 sed -i  's/"upload"/"\/upload"/g' kcfinder/conf/config.php
-[ -d bower_components/ckeditor/plugins/pbckcode ] || git clone git@github.com:prbaron/pbckcode.git bower_components/ckeditor/plugins/pbckcode
 
 cat > bower_components/ckeditor/config.js  <<'endmsg'
 CKEDITOR.editorConfig = function( config ) {
@@ -39,19 +38,6 @@ CKEDITOR.editorConfig = function( config ) {
 	config.filebrowserFlashUploadUrl = '/kcfinder/upload.php?opener=ckeditor&type=flash';
 	//do not add extra paragraph to html
 	config.autoParagraph = false;
-
-	config.toolbarGroups = [
-		{"name":"basicstyles","groups":["basicstyles"]},
-		{"name":"links","groups":["links"]},
-		{"name":"paragraph","groups":["list","blocks"]},
-		{"name":"document","groups":["mode"]},
-		{"name":"insert","groups":["insert"]},
-		{"name":"styles","groups":["styles"]},
-		{"name":"about","groups":["about"]},
-		{ name: 'pbckcode', "groups":["pbckcode"]}
-	];
-
-	config.extraPlugins = 'pbckcode';
 };
 endmsg
 cd /var/www/html/$1

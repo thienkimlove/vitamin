@@ -16,6 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "ckeditor": "#standard/latest"
+    "ckeditor": "#full/4.5.7"
   }
 }
