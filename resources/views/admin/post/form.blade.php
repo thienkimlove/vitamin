@@ -60,6 +60,11 @@
                 {!! Form::select('tag_list[]', $tags, null, ['id' => 'tag_list', 'class' => 'form-control', 'multiple']) !!}
             </div>
 
+                <div class="form-group">
+                    {!! Form::label('index_slide', 'Index Slider') !!}
+                    {!! Form::checkbox('index_slide', null, null) !!}
+                </div>
+
 
             <div class="form-group">
                 {!! Form::label('status', 'Publish') !!}

@@ -58,16 +58,17 @@ Route::group(['middleware' => 'web'], function () {
     Route::resource('admin/tags', 'TagsController');
     Route::resource('admin/products', 'ProductsController');
     Route::resource('admin/deliveries', 'DeliveriesController');
+    Route::resource('admin/banners', 'BannersController');
 });
 
 Route::get('/', function () {
 
     $page = 'index';
+    $sliders = Post::publish()->where('index_slide', true)->latest('updated_at')->limit(4)->get();
     $settings = Setting::lists('value', 'name')->all();
-
     $latestNews = Post::publish()->latest('updated_at')->limit(3)->get();
     $latestQuestions = Question::publish()->latest('updated_at')->limit(7)->get();
-    return view('frontend.index', compact('latestNews', 'latestQuestions', 'page'))->with([
+    return view('frontend.index', compact('latestNews', 'latestQuestions', 'page', 'sliders'))->with([
         'meta_title' =>  $settings['META_INDEX_TITLE'],
         'meta_desc' =>  $settings['META_INDEX_DESC'],
         'meta_keywords' =>  $settings['META_INDEX_KEYWORDS'],
@@ -196,6 +197,8 @@ Route::get('{value}', function ($value)  {
                 ->limit($categoryLimit)
                 ->get();
         }
+        
+        $postBanners = \App\Banner::where('status', true)->where('position', 'post_detail')->get();
 
         $latestNews = Post::publish()
             ->where('category_id', $post->category_id)
@@ -204,7 +207,7 @@ Route::get('{value}', function ($value)  {
             ->limit(6)
             ->get();
 
-        return view('frontend.post', compact('post', 'relatedPosts', 'additionPosts', 'latestNews'))->with([
+        return view('frontend.post', compact('post', 'relatedPosts', 'additionPosts', 'latestNews', 'postBanners'))->with([
             'meta_title' => ($post->seo_title) ? $post->seo_title : $post->title,
             'meta_desc' => $post->desc,
             'meta_keywords' => ($post->tagList) ? implode(',', $post->tagList) : $settings['META_POST_KEYWORDS'],

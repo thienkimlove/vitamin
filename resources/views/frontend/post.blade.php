@@ -36,11 +36,13 @@
                         @endif
                     </ul>
                 </div>
+                @foreach ($postBanners as $banner)
                 <div class="boxAdv">
-                    <a href="#" title="adv">
-                        <img src="{{url('frontend/imgs/temp/adv01.jpg')}}" alt="ADV">
+                    <a href="{{$banner->url}}" title="adv">
+                        <img src="{{url('files/'.$banner->image)}}" alt="ADV">
                     </a>
                 </div>
+                @endforeach
                 <div class="boxNews">
                     <h3 class="globalTitle"><a href="#">Tin mới nhất</a></h3>
                     <div class="listNews clearFix">

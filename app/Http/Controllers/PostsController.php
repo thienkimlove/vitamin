@@ -74,6 +74,7 @@ class PostsController extends AdminController
     {
         $data = $request->all();
         $data['image'] =  ($request->file('image') && $request->file('image')->isValid()) ? $this->saveImage($request->file('image')) : '';
+        $data['index_slide'] = ($request->input('index_slide') == 'on') ? true : false;
         $data['status'] = ($request->input('status') == 'on') ? true : false;
         $post = Post::create($data);
         $this->syncTags($request, $post);
@@ -96,6 +97,7 @@ class PostsController extends AdminController
         if ($request->file('image') && $request->file('image')->isValid()) {
             $data['image'] = $this->saveImage($request->file('image'), $post->image);
         }
+        $data['index_slide'] = ($request->input('index_slide') == 'on') ? true : false;
         $data['status'] = ($request->input('status') == 'on') ? true : false;
         $post->update($data);
         $this->syncTags($request, $post);

@@ -79,6 +79,10 @@ return array(
         '188x125' => function($image) {
             return $image->fit(188, 125);
         },
+
+        '274x174' => function($image) {
+            return $image->fit(274, 174);
+        },
     ),
 
     /*

@@ -25,7 +25,8 @@ class Post extends Model implements SluggableInterface
         'image',
         'status',
         'seo_title',
-        'views'
+        'views',
+        'index_slide'
     ];
 
     protected $dates = ['created_at', 'updated_at'];

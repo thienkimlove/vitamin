@@ -112,6 +112,20 @@
                 </li>
 
                 <li>
+                    <a><i class="fa fa-files-o fa-fw"></i>Banners<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+
+                        <li>
+                            <a href="{{url('admin/banners')}}">List</a>
+                        </li>
+                        <li>
+                            <a href="{{url('admin/banners/create')}}">Add</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+
+                <li>
                     <a><i class="fa fa-files-o fa-fw"></i>Tags<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
 

@@ -57,16 +57,13 @@
 <section class="boxBanner">
     <div class="boxSlider">
         <div class="owl-carousel" id="slideIndex">
+           @foreach ($headerIndexBanners as $banner)
             <div class="item">
-                <a class="thumb" href="" title="">
-                    <img src="{{url('frontend/imgs/temp/banner02.jpg')}}"/>
+                <a class="thumb" href="{{$banner->url}}" title="">
+                    <img src="{{url('files/'.$banner->image)}}"/>
                 </a>
             </div>
-            <div class="item">
-                <a class="thumb" href="" title="">
-                    <img src="{{url('frontend/imgs/temp/banner02.jpg')}}"/>
-                </a>
-            </div>
+            @endforeach
         </div>
     </div>
     <!--//box-Banner-->
@@ -75,16 +72,13 @@
     <section class="boxBanner">
         <div class="boxSlider">
             <div class="owl-carousel" id="slideHomepage">
-                <div class="item">
-                    <a class="thumb" href="" title="">
-                        <img src="{{url('frontend/imgs/temp/banner01.jpg')}}"/>
-                    </a>
-                </div>
-                <div class="item">
-                    <a class="thumb" href="" title="">
-                        <img src="{{url('frontend/imgs/temp/banner01.jpg')}}"/>
-                    </a>
-                </div>
+                @foreach ($headerNotIndexBanners as $banner)
+                    <div class="item">
+                        <a class="thumb" href="{{$banner->url}}" title="">
+                            <img src="{{url('files/'.$banner->image)}}"/>
+                        </a>
+                    </div>
+                @endforeach
             </div>
         </div>
         <!--//box-Banner-->

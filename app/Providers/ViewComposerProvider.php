@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Banner;
 use App\Category;
 use App\Post;
 use App\Product;
@@ -30,9 +31,15 @@ class ViewComposerProvider extends ServiceProvider
         view()->composer('example.composer', function ($view) {
             $view->with('latestPosts',  Post::latest()->limit(6)->get());
         });
-        view()->composer('frontend.header', function ($view) {          
+        view()->composer('frontend.header', function ($view) {     
+            
+            $headerIndexBanners = Banner::where('status', true)->where('position', 'header_index')->get();
+            $headerNotIndexBanners = Banner::where('status', true)->where('position', 'header_no_index')->get();
+            
             $view->with('headerCategories',  Category::whereNull('parent_id')->get());
             $view->with('menuProducts',  Product::all());           
+            $view->with('headerNotIndexBanners',  $headerNotIndexBanners);           
+            $view->with('headerIndexBanners',  $headerIndexBanners);           
         });
 
         view()->composer('frontend.right', function ($view) {            

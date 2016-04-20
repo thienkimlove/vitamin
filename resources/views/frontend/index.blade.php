@@ -101,71 +101,21 @@
             </h3>
             <div class="listSlidePage clearFix">
                 <div class="owl-carousel" id="slidePage">
-                    <div class="item wow slideInLeft" data-wow-duration="0.8s" data-wow-delay="1s">
-                        <a href="" title="">
-                            <img src="{{url('frontend/imgs/temp/share01.jpg')}}" width="274" height="174" alt=""/>
+                    @foreach ($sliders as $slider)
+                      <div class="item wow slideInLeft" data-wow-duration="0.8s" data-wow-delay="1s">
+                        <a href="{{url($slider->slug.'.html')}}" title="{{$slider->title}}">
+                            <img src="{{url('img/cache/274x174/'.$slider->image)}}" width="274" height="174" alt=""/>
                         </a>
                         <h3>
-                            <a href="#">
-                                HỆ MIỄN DỊCH KHÔNG PHẢI LÀ THỨ CÓ SẴN
+                            <a href="{{url($slider->slug.'.html')}}">
+                               {{$slider->title}}
                             </a>
                         </h3>
                         <p>
-                            Bên cạnh sự cân đối 4 nhóm vi chất dinh dưỡng thì phụ huynh cũng cần lưu tâm đến việc bổ sung các dưỡng chất tăng cường hệ miễn dịch cho trẻ. đến việc bổ sung các dưỡng chất tăng cường hệ miễn dịch cho trẻ.
+                           {{$slider->desc}}
                         </p>
                     </div>
-                    <div class="item wow slideInLeft" data-wow-duration="0.8s" data-wow-delay="1s">
-                        <a href="" title="">
-                            <img src="{{url('frontend/imgs/temp/share01.jpg')}}" width="274" height="174" alt=""/>
-                        </a>
-                        <h3>
-                            <a href="#">
-                                HỆ MIỄN DỊCH KHÔNG PHẢI LÀ THỨ CÓ SẴN
-                            </a>
-                        </h3>
-                        <p>
-                            Bên cạnh sự cân đối 4 nhóm vi chất dinh dưỡng thì phụ huynh cũng cần lưu tâm đến việc bổ sung các dưỡng chất tăng cường hệ miễn dịch cho trẻ. đến việc bổ sung các dưỡng chất tăng cường hệ miễn dịch cho trẻ.
-                        </p>
-                    </div>
-                    <div class="item wow slideInRight" data-wow-duration="1s" data-wow-delay="1s">
-                        <a href="" title="">
-                            <img src="{{url('frontend/imgs/temp/share01.jpg')}}" width="274" height="174" alt=""/>
-                        </a>
-                        <h3>
-                            <a href="#">
-                                HỆ MIỄN DỊCH KHÔNG PHẢI LÀ THỨ CÓ SẴN
-                            </a>
-                        </h3>
-                        <p>
-                            Bên cạnh sự cân đối 4 nhóm vi chất dinh dưỡng thì phụ huynh cũng cần lưu tâm đến việc bổ sung các dưỡng chất tăng cường hệ miễn dịch cho trẻ. đến việc bổ sung các dưỡng chất tăng cường hệ miễn dịch cho trẻ.
-                        </p>
-                    </div>
-                    <div class="item wow slideInRight" data-wow-duration="1s" data-wow-delay="1s">
-                        <a href="" title="">
-                            <img src="{{url('frontend/imgs/temp/share01.jpg')}}" width="274" height="174" alt=""/>
-                        </a>
-                        <h3>
-                            <a href="#">
-                                HỆ MIỄN DỊCH KHÔNG PHẢI LÀ THỨ CÓ SẴN
-                            </a>
-                        </h3>
-                        <p>
-                            Bên cạnh sự cân đối 4 nhóm vi chất dinh dưỡng thì phụ huynh cũng cần lưu tâm đến việc bổ sung các dưỡng chất tăng cường hệ miễn dịch cho trẻ. đến việc bổ sung các dưỡng chất tăng cường hệ miễn dịch cho trẻ.
-                        </p>
-                    </div>
-                    <!-- <div class="item">
-                      <a href="" title="">
-                        <img src="imgs/temp/share01.jpg" width="274" height="174" alt=""/>
-                      </a>
-                      <h3>
-                        <a href="#">
-                          HỆ MIỄN DỊCH KHÔNG PHẢI LÀ THỨ CÓ SẴN
-                        </a>
-                      </h3>
-                      <p>
-                        Bên cạnh sự cân đối 4 nhóm vi chất dinh dưỡng thì phụ huynh cũng cần lưu tâm đến việc bổ sung các dưỡng chất tăng cường hệ miễn dịch cho trẻ. đến việc bổ sung các dưỡng chất tăng cường hệ miễn dịch cho trẻ.
-                      </p>
-                    </div> -->
+                    @endforeach
                 </div>
             </div>
         </div>
