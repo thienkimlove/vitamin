@@ -163,7 +163,7 @@
                             @endforeach
                         </ul>
                         <div class="areaAsk">
-                            <a href="#" class="btnAsk">Đặt câu hỏi tại đây</a>
+                            <a href="{{url('cau-hoi-thuong-gap')}}" class="btnAsk">Đặt câu hỏi tại đây</a>
                         </div>
                     </div>
                     <div class="areaAvatar">
