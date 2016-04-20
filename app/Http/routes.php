@@ -64,7 +64,7 @@ Route::group(['middleware' => 'web'], function () {
 Route::get('/', function () {
 
     $page = 'index';
-    $sliders = Post::publish()->where('index_slide', true)->latest('updated_at')->limit(4)->get();
+    $sliders = Post::publish()->where('index_slide', true)->latest('updated_at')->limit(8)->get();
     $settings = Setting::lists('value', 'name')->all();
     $latestNews = Post::publish()->latest('updated_at')->limit(3)->get();
     $latestQuestions = Question::publish()->latest('updated_at')->limit(7)->get();
