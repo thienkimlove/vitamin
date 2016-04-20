@@ -14,16 +14,9 @@
     <link rel="stylesheet" href="{{url('frontend/css/ie9.css')}}" type="text/css"/>
     <![endif]-->
     <script src="{{url('frontend/js/modernizr.js')}}" type="text/javascript"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-570f69bb385fe2f2"></script>
 </head>
 <body>
-
-@include('frontend.header')
-
-<!-- /endBanner -->
- @yield('content')
-<!-- /endSection -->
-@include('frontend.footer')
-<!-- /endboxNews -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -32,6 +25,13 @@
         js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.6&appId=253971681611024";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
+@include('frontend.header')
+
+<!-- /endBanner -->
+ @yield('content')
+<!-- /endSection -->
+@include('frontend.footer')
+<!-- /endboxNews -->
 <script type="text/javascript" src="{{url('frontend/js/jquery-1.10.2.min.js')}}"></script>
 <script src="{{url('frontend/js/wow.min.js')}}"></script>
 <script type="text/javascript" src="{{url('frontend/js/jquery.matchHeight-min.js')}}"></script>

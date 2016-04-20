@@ -20,6 +20,8 @@
                     </div>
                    {!! $post->content !!}
                 </div>
+
+                <div class="addthis_native_toolbox"></div>
                 <div class="boxOrther">
                     <h3 class="globalTitle">
                         <a href="#">Tin liên quan</a>
