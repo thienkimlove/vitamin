@@ -21,7 +21,10 @@
                    {!! $post->content !!}
                 </div>
 
-                <div class="addthis_native_toolbox"></div>
+                <div class="boxLike">
+                    <div class="addthis_native_toolbox"></div>
+                </div>
+
                 <div class="boxOrther">
                     <h3 class="globalTitle">
                         <a href="#">Tin liên quan</a>
@@ -39,7 +42,10 @@
                     </ul>
                 </div>
 
-                <div class="fb-comments" data-href="http://www.cnattu.vn" data-numposts="5"></div>
+                <div class="boxComment">
+                    <div class="fb-comments" data-href="{{url($post->slug.'.html')}}" data-numposts="5"></div>
+                </div>
+
                 @foreach ($postBanners as $banner)
                 <div class="boxAdv">
                     <a href="{{$banner->url}}" title="adv">

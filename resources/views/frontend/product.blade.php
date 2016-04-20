@@ -18,17 +18,12 @@
                         <div class="item clearFix">
                             {!! $mainProduct->content_tab1 !!}
                         </div>
-                        <div class="boxLike">
-                            <div class="fb-like"></div>
-                        </div>
+
                         <div class="boxTags">
                             <span>Từ khóa</span>
                             @foreach ($mainProduct->tags as $tag)
                               <a href="{{url('tag/'.$tag->slug)}}" title="{{$tag->name}}">{{$tag->name}}</a>
                             @endforeach
-                        </div>
-                        <div class="boxComment">
-                            <div class="fb-comments" data-href="https://www.facebook.com/tuelinh.vn" data-numposts="5"></div>
                         </div>
                     </div>
                     <!-- endTab01 -->
@@ -45,6 +40,11 @@
                     </div>
                     <!-- /endTab03 -->
                 </div>
+
+                <div class="boxLike">
+                    <div class="addthis_native_toolbox"></div>
+                </div>
+
                 <div class="boxOrther">
                     <h3 class="globalTitle">
                         <a href="#">Tin liên quan</a>
@@ -55,11 +55,18 @@
                         @endforeach
                     </ul>
                 </div>
-                <div class="boxAdv">
-                    <a href="#" title="adv">
-                        <img src="{{url('frontend/imgs/temp/adv01.jpg')}}" alt="ADV">
-                    </a>
+
+                <div class="boxComment">
+                    <div class="fb-comments" data-href="{{url('product/'.$mainProduct->slug)}}" data-numposts="5"></div>
                 </div>
+
+                @foreach ($postBanners as $banner)
+                    <div class="boxAdv">
+                        <a href="{{$banner->url}}" title="adv">
+                            <img src="{{url('files/'.$banner->image)}}" alt="ADV">
+                        </a>
+                    </div>
+                @endforeach
                 <div class="boxNews">
                     <h3 class="globalTitle"><a href="#">Tin mới nhất</a></h3>
                     <div class="listNews clearFix">

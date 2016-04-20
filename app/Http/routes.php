@@ -137,10 +137,12 @@ Route::get('product/{value}', function($value)  {
     $meta_title = ($mainProduct->seo_title) ? $mainProduct->seo_title : $mainProduct->title;
     $meta_desc = $mainProduct->desc;
     $meta_keywords = $mainProduct->keywords;
+
+    $postBanners = \App\Banner::where('status', true)->where('position', 'post_detail')->get();
     
     
    
-    return view('frontend.product', compact('mainProduct', 'latestNews', 'related'))->with([
+    return view('frontend.product', compact('mainProduct', 'latestNews', 'related', 'postBanners'))->with([
         'meta_title' => $meta_title,
         'meta_desc' => $meta_desc,
         'meta_keywords' => $meta_keywords,
