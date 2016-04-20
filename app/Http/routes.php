@@ -167,12 +167,44 @@ Route::get('cau-hoi-thuong-gap/{value?}', function($value = null) {
 
 Route::get('{value}', function ($value)  {
     $settings = Setting::lists('value', 'name')->all();
-    if (preg_match('/([a-z0-9\-]+)\.html/', $value, $matches)) {        
-        $post = Post::where('slug', $matches[1])->first();
-        
-        $post->update(['views' => (int) $post->views + 1]);
+    if (preg_match('/([a-z0-9\-]+)\.html/', $value, $matches)) {
 
-        return view('frontend.post', compact('post'))->with([
+
+        $post = Post::where('slug', $matches[1])->first();
+        $post->update(['views' => (int) $post->views + 1]);
+        
+        
+        $post_tag = $post->tags->lists('id');
+
+        $relatedPosts = Post::publish()
+            ->whereHas('tags', function($q) use ($post_tag){
+                $q->whereIn('id', $post_tag);
+            })
+            ->where('id', '!=', $post->id)
+            ->orderBy('updated_at', 'desc')
+            ->limit(5)
+            ->get();
+
+        $additionPosts = null;
+
+        if ($relatedPosts->count() < 5) {
+            $categoryLimit = 5- $relatedPosts->count();
+            $additionPosts = Post::publish()
+                ->where('category_id', $post->category_id)              
+                ->where('id', '!=', $post->id)
+                ->latest('updated_at')
+                ->limit($categoryLimit)
+                ->get();
+        }
+
+        $latestNews = Post::publish()
+            ->where('category_id', $post->category_id)
+            ->where('id', '!=', $post->id)
+            ->latest('updated_at')
+            ->limit(6)
+            ->get();
+
+        return view('frontend.post', compact('post', 'relatedPosts', 'additionPosts', 'latestNews'))->with([
             'meta_title' => ($post->seo_title) ? $post->seo_title : $post->title,
             'meta_desc' => $post->desc,
             'meta_keywords' => ($post->tagList) ? implode(',', $post->tagList) : $settings['META_POST_KEYWORDS'],
