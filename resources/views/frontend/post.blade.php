@@ -38,6 +38,8 @@
                         @endif
                     </ul>
                 </div>
+
+                <div class="fb-comments" data-href="http://www.cnattu.vn" data-numposts="5"></div>
                 @foreach ($postBanners as $banner)
                 <div class="boxAdv">
                     <a href="{{$banner->url}}" title="adv">
