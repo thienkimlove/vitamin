@@ -18,7 +18,7 @@
                             <img src="{{url('img/cache/400x289/'.$featurePost->image)}}" alt="">
                         </a>
                         <h3>
-                            {{$featurePost->title}}
+                            <a href="{{url($featurePost->slug.'.html')}}">{{$featurePost->title}}</a>
                         </h3>
                         <p>
                             {{$featurePost->desc}}
