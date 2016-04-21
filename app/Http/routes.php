@@ -145,12 +145,45 @@ Route::post('save_question', function(\Illuminate\Http\Request $request){
     return redirect('cau-hoi-thuong-gap');
 });
 
-Route::get('product/{value}', function($value)  {
-    
-    $latestNews = Post::publish()->latest('updated_at')->limit(6)->get();
-    
-    $mainProduct = Product::where('slug', $value)->first();
 
+Route::get('tag/{value}', function($value)  {   
+    $tag = \App\Tag::where('slug', $value)->get();
+    
+    if ($tag->count() > 0) {
+        
+        $tag = $tag->first();        
+        
+        $meta_title = ($tag->seo_title) ? $tag->seo_title : $tag->title;
+        $meta_desc = $tag->desc;
+        $meta_keywords = $tag->keywords;        
+        
+        $posts =  Post::publish()
+            ->whereHas('tags', function($q) use ($tag){
+                $q->where('id', $tag->id);
+            })
+            ->orderBy('updated_at', 'desc')
+            ->paginate(10);
+        
+        return view('frontend.tag', compact('posts', 'tag'))->with([
+            'meta_title' => $meta_title,
+            'meta_desc' => $meta_desc,
+            'meta_keywords' => $meta_keywords,
+        ]);
+    } else {
+       $keyword = $value;        
+        
+       $posts = Post::publish()->where('title', 'LIKE', '%'.$keyword.'%')->paginate(10);
+        
+        return view('frontend.search', compact('posts', 'keyword'))->with([
+            'meta_title' => 'Tìm kiếm cho từ khóa '.$keyword,
+            'meta_desc' => 'Tìm kiếm cho từ khóa '.$keyword,
+            'meta_keywords' => $keyword,
+        ]);
+    }        
+});
+Route::get('product/{value}', function($value)  {    
+    $latestNews = Post::publish()->latest('updated_at')->limit(6)->get();    
+    $mainProduct = Product::where('slug', $value)->first();
     $product_tag = $mainProduct->tags->lists('id')->all();
 
     $related = Post::publish()
