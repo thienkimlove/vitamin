@@ -16,11 +16,8 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Name</th>
-                                <th>Address</th>
-                                <th>Province</th>
                                 <th>City</th>
-                                <th>Phone</th>
+                                <th>Area</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -28,12 +25,8 @@
                             @foreach($deliveries as $delivery)
                                 <tr>
                                     <td>{{$delivery->id}}</td>
-                                    <td>{{$delivery->name}}</td>
-                                    <td>{{$delivery->address}}</td>
-                                    <td>{{$delivery->province}}</td>
-                                    <td>{{$delivery->city}}</td>
-                                    <td>{{$delivery->phone}}</td>
-
+                                    <td>{{config('delivery')['city'][$delivery->city]}}</td>
+                                    <td>{{config('delivery')['area'][$delivery->area]}}</td>
                                     <td>
                                         <button id-attr="{{$delivery->id}}" class="btn btn-primary btn-sm edit-delivery" type="button">Edit</button>&nbsp;
                                         {!! Form::open(['method' => 'DELETE', 'route' => ['admin.deliveries.destroy', $delivery->id]]) !!}

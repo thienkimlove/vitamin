@@ -1,5 +1,8 @@
 (function($){
   //slider
+  var statusSearch = 0;
+  var timeSearch = null;
+  var delaySearch = 5000;
   var slidePage = function(){
       $('#slidePage').owlCarousel({
         loop:true,
@@ -141,13 +144,36 @@
     $("#"+tab_id).addClass('active');
   })
   //end
+  var checkSearch = function(){
+    if(statusSearch == 0){
+        window.clearTimeout(timeSearch);
+        timeSearch = window.setTimeout(function(){
+            $("#box-find").stop().animate({width: 210});
+        },0);
+    }else{
+        window.clearTimeout(timeSearch);
+        timeSearch = window.setTimeout(function(){
+            $("#box-find").stop().animate({width: 40});
+        },delaySearch);
+    }
+};
+
+var changeSearch = function(){
+    $("#box-find").hover(function(){
+        checkSearch();
+        statusSearch = 1;
+    },function(){
+        checkSearch();
+        statusSearch = 0;
+    });
+};
   //mobile
   /*mobile*/
   var nav_global = $('#globalNav');
   var showMenuMobile = function () {
     $('#btnMenu').click(function(e){
       var w_device = $(window).width();
-      if(e.handled !== true){
+      if(e.handled !== false){
         if(w_device < 959 && $('#btnMenu').is(':visible')){
           if(nav_global.is(':visible')){
             nav_global.slideUp(500);
@@ -229,6 +255,7 @@
     }
   //end
   jQuery(document).ready(function() {
+    changeSearch();
     slidePage();
     slideRelateds();
     showMenuMobile();

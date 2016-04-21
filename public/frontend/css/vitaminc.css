@@ -328,6 +328,42 @@ section, header, footer {
   color: #006838;
 }
 
+.box-find {
+  position: absolute;
+  z-index: 15;
+  right: 8px;
+  width: 48px;
+  height: 53px;
+  top: 0px;
+  overflow: hidden;
+}
+.box-find .txt {
+  position: absolute;
+  left: 10px;
+  padding: 0 10px;
+  width: 160px;
+  border: none;
+  outline: none;
+  background: #fff;
+  margin-top: 10px;
+  height: 30px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.box-find .btn-find {
+  position: absolute;
+  top: 0;
+  right: -7px;
+  border: none;
+  outline: none;
+  width: 48px;
+  height: 53px;
+  background: url("../imgs/bg/subIcon.png") no-repeat;
+  background-position: 0 0;
+  text-indent: -9090px;
+}
+
 #sideBar {
   position: absolute;
   right: 0;
@@ -336,6 +372,15 @@ section, header, footer {
 .sidebar {
   position: absolute;
   right: 0;
+}
+
+.hotLine {
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 10px 0 10px 10px;
+  z-index: 9999;
 }
 
 .section {
@@ -1801,8 +1846,17 @@ section, header, footer {
 }
 @media only screen and (max-width: 640px) {
   /* Styles */
+  /* body {
+    overflow-y: auto;
+  } */
+  .breadCrumb {
+    display: none;
+  }
+
   #globalNav {
     padding-left: 0;
+    padding-top: 0;
+    margin-top: 0;
   }
   #globalNav li {
     display: inherit;
@@ -1811,7 +1865,9 @@ section, header, footer {
 
   .header {
     position: relative;
+    overflow: hidden;
     min-height: inherit;
+    margin-bottom: 10px;
   }
   .header .logo {
     float: left;
@@ -1824,8 +1880,14 @@ section, header, footer {
     display: none;
   }
 
+  .boxSlidePage .globalTitle {
+    font-size: 22px;
+  }
+
   .tabs, .proTabs {
     position: relative;
+    top: 0;
+    left: 0;
   }
   .tabs li, .proTabs li {
     border-radius: 0px;
@@ -1857,13 +1919,19 @@ section, header, footer {
   }
 }
 @media only screen and (max-width: 480px) {
-  .boxNews img {
-    width: 100%;
+  .boxBanner {
+    display: none;
   }
+
   .boxNews .listNews .thumb {
     float: none;
     margin-right: 0;
     display: block;
+    text-align: center;
+  }
+
+  .boxSlidePage .globalTitle .bgLight:after, .boxSlidePage .globalTitle .bgLight:before {
+    content: none;
   }
 
   .boxMedia .thumbVideo {

@@ -8,7 +8,7 @@ use App\Http\Requests\DeliveryRequest;
 
 
 class DeliveriesController extends AdminController
-{
+{    
    
     public function index()
     {

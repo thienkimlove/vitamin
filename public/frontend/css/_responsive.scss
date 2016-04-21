@@ -76,8 +76,16 @@
 }
 @media only screen and (max-width:640px){
 /* Styles */
+  /* body {
+    overflow-y: auto;
+  } */
+  .breadCrumb {
+    display: none;
+  }
   #globalNav {
     padding-left: 0;
+    padding-top: 0;
+    margin-top: 0;
     li {
       display: inherit;
       border: none;
@@ -85,7 +93,9 @@
   }
   .header {
     position: relative;
+    overflow: hidden;
     min-height: inherit;
+    margin-bottom: 10px;
     .logo {
       float: left;
       position: relative;
@@ -96,8 +106,15 @@
   .boxSlider {
     display: none;
   }
+  .boxSlidePage {
+    .globalTitle {
+      font-size: 22px;
+    }
+  }
   .tabs, .proTabs {
     position: relative;
+    top: 0;
+    left: 0;
     li {
       border-radius: 0px;
     }
@@ -127,15 +144,25 @@
   }
 }
 @media only screen and (max-width:480px) {
+  .boxBanner {
+    display: none;
+  }
   .boxNews {
-    img {
-      width: 100%;
-    }
     .listNews {
       .thumb {
         float: none;
         margin-right: 0;
         display: block;
+        text-align: center;
+      }
+    }
+  }
+  .boxSlidePage {
+    .globalTitle {
+      .bgLight {
+        &:after,&:before {
+          content: none;
+        }
       }
     }
   }

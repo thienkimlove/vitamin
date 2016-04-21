@@ -17,29 +17,36 @@
                 {!! Form::model($delivery = new App\Delivery, ['route' => ['admin.deliveries.store']]) !!}
             @endif
 
-            <div class="form-group">
-                {!! Form::label('name', 'Name Nha Thuoc') !!}
-                {!! Form::text('name', null, ['class' => 'form-control']) !!}
-            </div>
+
+                <div class="form-group">
+                    {!! Form::label('area', 'Miền') !!}
+                    {!! Form::select('area', config('delivery')['area'], null, ['class' => 'form-control']) !!}
+                </div>
 
                 <div class="form-group">
                     {!! Form::label('city', 'Thanh Pho') !!}
-                    {!! Form::text('city', null, ['class' => 'form-control']) !!}
+                    {!! Form::select('city', config('delivery')['city'], null, ['class' => 'form-control']) !!}
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('province', 'Quan Huyen') !!}
-                    {!! Form::text('province', null, ['class' => 'form-control']) !!}
+                    {!! Form::label('content', 'Noi Dung') !!}
+                    {!! Form::textarea('content', null, ['class' => 'form-control ckeditor']) !!}
+                </div>
+
+
+                <div class="form-group">
+                    {!! Form::label('seo_title', 'SEO title') !!}
+                    {!! Form::text('seo_title', null, ['class' => 'form-control']) !!}
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('phone', 'Phone') !!}
-                    {!! Form::text('phone', null, ['class' => 'form-control']) !!}
+                    {!! Form::label('desc', 'SEO Description') !!}
+                    {!! Form::textarea('desc', null, ['class' => 'form-control']) !!}
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('address', 'Address') !!}
-                    {!! Form::textarea('address', null, ['class' => 'form-control']) !!}
+                    {!! Form::label('keywords', 'SEO Keywords') !!}
+                    {!! Form::textarea('keywords', null, ['class' => 'form-control']) !!}
                 </div>
 
 

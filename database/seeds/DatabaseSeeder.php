@@ -79,6 +79,19 @@ class DatabaseSeeder extends Seeder
                 'name' => 'META_QUESTION_KEYWORDS',
                 'value' => 'VitaminC'
             ],
+
+            [
+                'name' => 'META_DELIVERY_TITLE',
+                'value' => 'VitaminC'
+            ],
+            [
+                'name' => 'META_DELIVERY_DESC',
+                'value' => 'VitaminC'
+            ],
+            [
+                'name' => 'META_DELIVERY_KEYWORDS',
+                'value' => 'VitaminC'
+            ],
         ];
 
         \App\Setting::insert($settings);

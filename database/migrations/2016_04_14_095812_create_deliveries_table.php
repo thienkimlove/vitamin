@@ -14,11 +14,12 @@ class CreateDeliveriesTable extends Migration
     {
         Schema::create('deliveries', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('city');
-            $table->string('province');
-            $table->text('address');
-            $table->string('name');
-            $table->string('phone');
+            $table->integer('city');
+            $table->smallInteger('area');
+            $table->text('content');
+            $table->text('desc');
+            $table->string('seo_title');
+            $table->text('keywords');                     
         });
     }
 

@@ -1,13 +1,24 @@
-<section class="menuIcon pc">
+<section class="menuIcon">
     <div class="listIcons">
         <ul>
-            <li><a href="#" class="iSearch">Search</a></li>
+            <li>
+                <a href="#" class="iSearch">Search</a>
+                <div class="box-find" id="box-find">
+                    <form>
+                        <input type="text" placeholder="Từ khóa tìm kiếm" name="keyword" class="txt"/>
+                        <input type="submit" value="" name="submit" class="btn-find"/>
+                    </form>
+                </div>
+            </li>
             <li><a href="#" class="iYou">Youtube</a></li>
             <li><a href="#" class="iSkype">Skype</a></li>
             <li><a href="#" class="iGoogle">Google</a></li>
         </ul>
     </div>
 </section>
+<div class="hotLine sp">
+    <img src="{{url('frontend/imgs/hot.png')}}" alt="Hot">
+</div>
 <header class="header">
     <div class="container">
         <h1 class="clearFix">
@@ -47,6 +58,7 @@
             <li><a href="{{url('video')}}">Videos</a></li>
             <li><a href="{{url('cau-hoi-thuong-gap')}}">CÂU HỎI <br>THƯỜNG GẶP</a></li>
             <li><a href="{{url('lien-he')}}">Liên hệ</a></li>
+            <li><a href="{{url('phan-phoi')}}">Hệ thống phân phối</a></li>
         </ul>
         <a href="#" title="Menu" class="sp btnMenu" id="btnMenu">Menu</a>
     </div>

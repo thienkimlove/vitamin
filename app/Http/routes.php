@@ -109,6 +109,33 @@ Route::get('video/{value?}', function($value = null)  {
     ]);
 });
 
+Route::get('phan-phoi/{value?}', function($value = null)  {
+    $settings = Setting::lists('value', 'name')->all();   
+    $meta_title = $meta_desc = $meta_keywords =  null;
+    if ($value) {       
+        $delivery = \App\Delivery::find($value);
+        $meta_title = $delivery->seo_title;
+        $meta_desc = $delivery->desc;
+        $meta_keywords = $delivery->keywords;
+        
+        return view('frontend.detail_delivery', compact('delivery'))->with([
+            'meta_title' => ($meta_title) ? $meta_title : $settings['META_DELIVERY_TITLE'],
+            'meta_desc' => ($meta_desc) ? $meta_desc : $settings['META_DELIVERY_DESC'],
+            'meta_keywords' => ($meta_keywords) ? $meta_keywords : $settings['META_DELIVERY_KEYWORDS'],
+        ]);
+    } else {
+        $totalDeliveries = [];
+        foreach (config('delivery')['area'] as $key => $area) {
+            $totalDeliveries[$area] = \App\Delivery::where('area', $key)->get();           
+        }
+        return view('frontend.delivery', compact('totalDeliveries'))->with([
+            'meta_title' => ($meta_title) ? $meta_title : $settings['META_DELIVERY_TITLE'],
+            'meta_desc' => ($meta_desc) ? $meta_desc : $settings['META_DELIVERY_DESC'],
+            'meta_keywords' => ($meta_keywords) ? $meta_keywords : $settings['META_DELIVERY_KEYWORDS'],
+        ]);
+    }
+    
+});
 Route::post('save_question', function(\Illuminate\Http\Request $request){
 
     if ($request->input('question')) {
