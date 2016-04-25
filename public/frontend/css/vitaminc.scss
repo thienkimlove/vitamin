@@ -270,8 +270,35 @@
       }
     }
   }
+  .listIntro {
+    display: none;
+    .item {
+      margin-bottom: 10px;
+    }
+    .number {
+      width: 44px;
+      height: 44px;
+      float: left;
+      margin-right: 10px;
+      border: 2px solid #d7df25;
+      background: #e91d24;
+      text-align: center;
+      color: #fff;
+      @include border-radius(50%);
+      span {
+        font-size: 20px;
+        line-height: 2;
+      }
+    }
+    .contentIntro {
+
+    }
+  }
   .areaImgs {
     position: relative;
+  }
+  h3 {
+    color: #e91d24;
   }
   .contentImg {
     padding: 10px 0 0 70px;
@@ -285,6 +312,7 @@
     float: right;
     text-align: right;
     @extend %box-sizing-border;
+
   }
   .imgNumber {
     position: absolute;

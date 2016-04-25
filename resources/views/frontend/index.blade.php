@@ -86,6 +86,91 @@
                     </div>
 
                 </div>
+                <div class="listIntro">
+                    <div class="item clearFix">
+                        <div class="number">
+                            <span>1</span>
+                        </div>
+                        <div class="contentIntro">
+                            <h3>Vitamin C</h3>
+                            <p>C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry</p>
+                        </div>
+                    </div>
+                    <!-- //end -->
+                    <div class="item clearFix">
+                        <div class="number">
+                            <span>2</span>
+                        </div>
+                        <div class="contentIntro">
+                            <h3>Vitamin C</h3>
+                            <p>C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry</p>
+                        </div>
+                    </div>
+                    <!-- //end -->
+                    <div class="item clearFix">
+                        <div class="number">
+                            <span>3</span>
+                        </div>
+                        <div class="contentIntro">
+                            <h3>Vitamin C</h3>
+                            <p>C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry</p>
+                        </div>
+                    </div>
+                    <!-- //end -->
+                    <div class="item clearFix">
+                        <div class="number">
+                            <span>4</span>
+                        </div>
+                        <div class="contentIntro">
+                            <h3>Vitamin C</h3>
+                            <p>C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry</p>
+                        </div>
+                    </div>
+                    <!-- //end -->
+                    <div class="item clearFix">
+                        <div class="number">
+                            <span>5</span>
+                        </div>
+                        <div class="contentIntro">
+                            <h3>Vitamin C</h3>
+                            <p>C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry</p>
+                        </div>
+                    </div>
+                    <!-- //end -->
+                    <div class="item clearFix">
+                        <div class="number">
+                            <span>6</span>
+                        </div>
+                        <div class="contentIntro">
+                            <h3>Vitamin C</h3>
+                            <p>C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry</p>
+                        </div>
+                    </div>
+                    <!-- //end -->
+                    <div class="item clearFix">
+                        <div class="number">
+                            <span>7</span>
+                        </div>
+                        <div class="contentIntro">
+                            <h3>Vitamin C</h3>
+                            <p>C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry</p>
+                        </div>
+                    </div>
+                    <!-- //end -->
+                    <div class="item clearFix">
+                        <div class="number">
+                            <span>8</span>
+                        </div>
+                        <div class="contentIntro">
+                            <h3>Vitamin C</h3>
+                            <p>C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="{{url('frontend/imgs/bg/spBotHome.png')}}" alt="">
+                    </div>
+                    <!-- //end -->
+                </div>
             </div>
         </div>
     </section>

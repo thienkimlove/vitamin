@@ -460,8 +460,34 @@ section, header, footer {
   content: "";
   right: 0;
 }
+.boxIntro .listIntro {
+  display: none;
+}
+.boxIntro .listIntro .item {
+  margin-bottom: 10px;
+}
+.boxIntro .listIntro .number {
+  width: 44px;
+  height: 44px;
+  float: left;
+  margin-right: 10px;
+  border: 2px solid #d7df25;
+  background: #e91d24;
+  text-align: center;
+  color: #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.boxIntro .listIntro .number span {
+  font-size: 20px;
+  line-height: 2;
+}
 .boxIntro .areaImgs {
   position: relative;
+}
+.boxIntro h3 {
+  color: #e91d24;
 }
 .boxIntro .contentImg {
   padding: 10px 0 0 70px;
@@ -1853,6 +1879,10 @@ section, header, footer {
     display: none;
   }
 
+  .section.vis {
+    overflow: hidden;
+  }
+
   #globalNav {
     padding-left: 0;
     padding-top: 0;
@@ -1876,12 +1906,25 @@ section, header, footer {
     padding-bottom: 10px;
   }
 
-  .boxSlider {
+  .boxIntro .areaImgs {
+    display: none;
+  }
+  .boxIntro .listIntro {
+    display: block;
+  }
+
+  .boxBanner {
+    padding-top: 0;
+  }
+  .boxBanner .owl-nav {
     display: none;
   }
 
-  .boxSlidePage .globalTitle {
+  .boxSlidePage .globalTitle, .boxIntro .globalTitle {
     font-size: 22px;
+  }
+  .boxSlidePage .globalTitle .bgLight:before, .boxSlidePage .globalTitle .bgLight:after, .boxIntro .globalTitle .bgLight:before, .boxIntro .globalTitle .bgLight:after {
+    display: none;
   }
 
   .tabs, .proTabs {
@@ -1920,7 +1963,7 @@ section, header, footer {
 }
 @media only screen and (max-width: 480px) {
   .boxBanner {
-    display: none;
+    /* display: none; */
   }
 
   .boxNews .listNews .thumb {
