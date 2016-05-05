@@ -1504,6 +1504,8 @@ section, header, footer {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+  overflow: hidden;
+  height: 275px;
 }
 .boxSlidePage .item h3 {
   margin: 10px 0 5px;
