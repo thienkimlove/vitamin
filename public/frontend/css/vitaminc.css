@@ -210,7 +210,7 @@ section, header, footer {
   position: absolute;
   right: 20px;
   top: 15px;
-  background: url(../imgs/bg/sprite.png) no-repeat 0 -44px;
+  background: url(../imgs/bg/sprite.png) no-repeat -63px -44px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -218,7 +218,7 @@ section, header, footer {
   transition: all 0.2s ease-in-out;
 }
 .btnMenu.show {
-  background: url(../imgs/bg/sprite.png) no-repeat -63px -44px;
+  background: url(../imgs/bg/sprite.png) no-repeat 0 -44px;
   width: 44px;
   height: 44px;
 }
@@ -643,6 +643,7 @@ section, header, footer {
   top: 30%;
   right: 0;
   z-index: 999;
+  overflow: visible;
 }
 .menuIcon .listIcons li {
   list-style: none;
@@ -1818,11 +1819,14 @@ section, header, footer {
     float: left;
     width: 100%;
     margin-bottom: 10px;
+    padding-left: 0;
   }
   #globalNav li {
     width: 100%;
     text-align: center;
     margin: 5px 0;
+    border: none;
+    display: block;
   }
   #globalNav li:before {
     display: none;
@@ -1875,6 +1879,10 @@ section, header, footer {
   /* body {
     overflow-y: auto;
   } */
+  .section {
+    margin-bottom: 10px;
+  }
+
   .breadCrumb {
     display: none;
   }
@@ -1915,6 +1923,7 @@ section, header, footer {
 
   .boxBanner {
     padding-top: 0;
+    margin-bottom: 0;
   }
   .boxBanner .owl-nav {
     display: none;
