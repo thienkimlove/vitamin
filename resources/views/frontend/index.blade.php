@@ -221,7 +221,7 @@
                                 <img src="{{url('img/cache/188x125/'.$post->image)}}" alt="List news">
                             </a>
                             <p>
-                                {{$post->desc}}
+                                {{$post->title}}
                             </p>
                             <span class="datePost">{{$post->updated_at->format('m/d/Y')}}</span>
                             <span class="countView">{{$post->views}} lượt xem</span>
