@@ -218,7 +218,7 @@
                         @foreach ($latestNews as $post)
                         <div class="item">
                             <a href="{{url($post->slug.'.html')}}" class="thumb">
-                                <img src="{{url('img/cache/188x125/'.$post->image)}}" alt="List news">
+                                <img src="{{url('img/cache/257x171/'.$post->image)}}" alt="List news">
                             </a>
                             <p>
                                 <a href="{{url($post->slug.'.html')}}">{{$post->title}}</a>
