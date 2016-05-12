@@ -11,14 +11,14 @@
             </div>
             <div class="areaLink">
                 <ul class="listCategory clearFix">
-                    <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">VITAMIN C TỰ NHIÊN</a></li>
-                    <li><a href="#">Vitamin C</a></li>
-                    <li><a href="#">TIN TỨC</a></li>
-                    <li><a href="#">GÓC MẸ THÔNG THÁI</a></li>
-                    <li><a href="#">Video</a></li>
-                    <li><a href="#">CÂU HỎI THƯỜNG GẶP</a></li>
-                    <li><a href="#">LIÊN HỆ</a></li>
+                    <li><a href="http://www.cnattu.vn">Trang chủ</a></li>
+                    <li><a href="http://www.cnattu.vn/product/cnattu">Vitamin C tự nhiên</a></li>
+                    <li><a href="http://www.cnattu.vn/tin-tuc">Tin tức</a></li>
+                    <li><a href="http://www.cnattu.vn/goc-me-thong-thai">Góc mẹ thông thái</a></li>
+                    <li><a href="http://www.cnattu.vn/video">Video</a></li>
+                    <li><a href="http://www.cnattu.vn/cau-hoi-thuong-gap">Hỏi đáp</a></li>
+                    <li><a href="http://www.cnattu.vn/lien-he">Liên hệ</a></li>
+					<li><a href="http://www.cnattu.vn/phan-phoi">Phân phối</a></li>
                 </ul>
             </div>
         </div>

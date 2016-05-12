@@ -56,7 +56,7 @@
 
 
             <li><a href="{{url('video')}}">Videos</a></li>
-            <li><a href="{{url('cau-hoi-thuong-gap')}}">CÂU HỎI <br>THƯỜNG GẶP</a></li>
+            <li><a href="{{url('cau-hoi-thuong-gap')}}">Hỏi đáp</a></li>
             <li><a href="{{url('lien-he')}}">Liên hệ</a></li>
             <li><a href="{{url('phan-phoi')}}">Hệ thống phân phối</a></li>
         </ul>

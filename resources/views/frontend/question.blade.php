@@ -17,9 +17,9 @@
                         <a href="{{url('cau-hoi-thuong-gap/'.$mainQuestion->slug)}}" class="thumb">
                             <img src="{{url('frontend/imgs/bg/avatar.png')}}" alt="">
                         </a>
-                        <h3>
+                        <p>
                             {{$mainQuestion->question}}
-                        </h3>
+                        </p>
                         <p>
                             Độc giả có thể gửi câu hỏi trực tiếp vào bảng đặt câu hỏi dưới đây, hoặc gửi trực tiếp vào Email:
                             <a href="#">tuvansuckhoe.bsdinh@gmail.com</a>

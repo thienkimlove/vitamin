@@ -16,67 +16,63 @@
                 <div class="areaImgs">
                     <div class="imgNumber imgN01 wow zoom-in" data-scroll-reveal="enter top, after 0.8s">
                         <div class="contentImg">
-                            <h3>Vitamin C Tự nhiên</h3>
-                            <p>
-                                C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry
-                            </p>
-                        </div>
+                            <h3>C NATTU KIDS</h3>
+                            <p>Chứa các Bioflavonoid (Rutin và Hesperidin) bảo vệ Vitamin C khỏi bị phá hủy (Oxi hóa)</p>
+                      </div>
                     </div>
                     <div class="imgNumber imgN02 wow zoom-in" data-scroll-reveal="enter bottom, after 0.8s">
                         <div class="contentImg">
-                            <h3>Vitamin C Tự nhiên</h3>
-                            <p>
-                                C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry
-                            </p>
-                        </div>
+                            <h3>C NATTU KIDS</h3>
+                            <p>Giúp dễ hấp thu Vitamin C tăng hiệu quả</p>
+                      </div>
                     </div>
                     <div class="imgNumber imgN03 wow zoom-in" data-scroll-reveal="enter top, after 0.8s">
                         <div class="contentImg">
-                            <h3>Vitamin C Tự nhiên</h3>
+                            <h3>C NATTU KIDS</h3>
                             <p>
-                                C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry
+                                Thải trừ chậm kéo dài tác dụng
                             </p>
-                        </div>
+                      </div>
                     </div>
                     <div class="imgNumber imgN04 wow zoom-in" data-scroll-reveal="enter bottom, after 0.8s">
                         <div class="contentImg">
-                            <h3>Vitamin C Tự nhiên</h3>
+                            <h3>C NATTU KIDS</h3>
                             <p>
-                                C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry
+                                Có độ chua(pH) trung tính, thích hợp với đường tiêu hóa
                             </p>
-                        </div>
+                      </div>
                     </div>
                     <div class="imgNumber imgN05 wow zoom-in" data-scroll-reveal="enter top, after 0.8s">
                         <div class="contentImgR">
-                            <h3>Vitamin C Tự nhiên</h3>
+                            <h3>C NATTU KIDS</h3>
                             <p>
-                                C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry
+                                Thơm ngon, tiện sử dụng
                             </p>
-                        </div>
+                      </div>
                     </div>
                     <div class="imgNumber imgN06 wow zoom-in" data-scroll-reveal="enter bottom, after 0.8s">
                         <div class="contentImgR">
-                            <h3>Vitamin C Tự nhiên</h3>
+                            <h3>C NATTU KIDS</h3>
                             <p>
-                                C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry
+                                Gia tăng tác dụng chống xuất huyết, chảy máu, phát ban...
                             </p>
-                        </div>
+                      </div>
                     </div>
                     <div class="imgNumber imgN07 wow zoom-in" data-scroll-reveal="enter top, after 0.8s">
                         <div class="contentImgR">
-                            <h3>Vitamin C Tự nhiên</h3>
+                            <h3>C NATTU KIDS</h3>
                             <p>
-                                C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry
+                                100% Nguyên liệu nhập khẩu Châu Âu
                             </p>
-                        </div>
+                      </div>
                     </div>
                     <div class="imgNumber imgN08 wow zoom-in" data-scroll-reveal="enter bottom, after 0.8s">
                         <div class="contentImgR">
-                            <h3>Vitamin C Tự nhiên</h3>
+                            <h3>C NATTU KIDS</h3>
                             <p>
-                                C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry
+                                Là sản phẩm sản phẩm duy nhất về Vitamin C tự nhiên trên thị trường
                             </p>
-                        </div>
+                      </div>
                     </div>
                     <div class="centerImg wow zoom-in" data-scroll-reveal="enter top, after 0.8s">
                         <img src="{{url('frontend/imgs/bg/spCenterHome.png')}}" alt="" width="670" height="735">
@@ -237,7 +233,7 @@
                         </h3>
                     </div>
                     <p>
-                        Với đội ngũ bác sĩ, dược sĩ nhiều năm kinh nghiệm và các chuyên gia hàng đầu của hãng dược phẩm Pleuran, chúng tôi luôn lắng nghe và sẵn sàng tư vấn với mong muốn mang tới sức khỏe toàn diện cho thế hệ mầm non Việt Nam.
+                      Với tâm niệm tạo ra giá trị phục vụ người Việt dựa trên nền dược liệu truyền thống, Tuệ Linh không ngừng nghiên cứu phát triển các sản phẩm mới mang thương hiệu trí tuệ Việt
                     </p>
                 </div>
                 <div class="boxQuestion clearFix">
