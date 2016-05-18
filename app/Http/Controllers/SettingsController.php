@@ -14,7 +14,7 @@ class SettingsController extends AdminController {
      */
     public function index()
     {
-        $settings = Setting::latest('updated_at')->paginate(10);
+        $settings = Setting::paginate(10);
         return view('admin.setting.index', compact('settings'));
     }  
 
