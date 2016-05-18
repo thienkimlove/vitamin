@@ -25,7 +25,7 @@
     <!-- /endSale -->
     <div class="boxHot clearFix sideBar">
         <h3 class="globalTitle"><a href="#">Tin nổi bật</a></h3>
-        @if ($page == 'index')
+        @if (isset($page) && $page == 'index')
             @foreach ($featureNews->splice(0, 2) as $post)
                 <div class="item clearFix">
                     <a href="{{url($post->slug.'.html')}}" class="thumb">
