@@ -244,7 +244,7 @@ var changeSearch = function(){
       });
     };
   /*equalHeight*/
-   equalHeight($('.boxMedia .item, .boxProducts .proTabs li'));
+   equalHeight($('.boxMedia .item'));
     function equalHeight(obj) {
       if($(window).width() > 480 && obj.length>0){
           obj.matchHeight();

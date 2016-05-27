@@ -11,8 +11,8 @@
                 <div class="boxProducts">
                     <ul class="proTabs clearFix">
                         <li class="tabLink active" data-tab="tabInfo">Thông tin sản phẩm</li>
-                        <li class="tabLink" data-tab="tabChoose">NHẬN BIẾT BAO BÌ</li>
-                        <li class="tabLink" data-tab="tabRate">Hướng dẫn sử dụng</li>
+                        <li class="tabLink" data-tab="tabChoose">Nghiên cứu lâm sàng</li>
+                        <li class="tabLink" data-tab="tabRate">Người thật việc thật</li>
                     </ul>
                     <div id="tabInfo" class="tabProduct active">
                         <div class="item clearFix">
@@ -44,6 +44,14 @@
                 <div class="boxLike">
                     <div class="addthis_native_toolbox"></div>
                 </div>
+                <div>
+                 <!-- //listButton -->
+                <ul class="listButton clearFix">
+                    <li class="ilocal"><a href="{{url('phan-phoi')}}">Xem điểm bán C Nattu</a></li>
+                    <li class="icall"><a href="{{url('lien-he')}}">1900 6482 - 0912 571 190</a></li>
+                </ul>
+				</div>
+				<br />
 
                 <div class="boxOrther">
                     <h3 class="globalTitle">
@@ -76,7 +84,7 @@
                                 <img src="{{url('img/cache/188x125/'.$post->image)}}" alt="List news">
                             </a>
                             <p>
-                               {{$post->desc}}
+                               <a href="{{url($post->slug.'.html')}}">{{$post->title}}</a>
                             </p>
                             <span class="datePost">{{$post->updated_at->format('m/d/Y')}}</span>
                             <span class="countView">{{$post->views}} lượt xem</span>
@@ -84,11 +92,6 @@
                         @endforeach
                     </div>
                 </div>
-                <!-- //listButton -->
-                <ul class="listButton clearFix">
-                    <li class="ilocal"><a href="{{url('phan-phoi')}}">Xem điểm bán C Nattu</a></li>
-                    <li class="icall"><a href="{{url('lien-he')}}">1900 6482 - 0912 571 190</a></li>
-                </ul>
             </div>
             @include('frontend.right')
         </div>

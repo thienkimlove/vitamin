@@ -6,61 +6,58 @@
             <!-- <img src="imgs/Trang-chu.jpg" alt=""> -->
             <div class="boxIntro pc">
                 <h3 class="globalTitle wow fadeIn" data-wow-duration="0.8s" data-wow-delay="1s">
-                    <a href="#">Vitamin C tự nhiên từ
+                    <a href="http://www.cnattu.vn/product/cnattu-kid" target="_blank">Vitamin C tự nhiên từ
                         <span class="highLight">ACEROLA CHERRY</span>
             <span class="bgLight">
-              có gì khác biệt ?
-            </span>
-                    </a>
-                </h3>
+              có gì khác biệt ?            </span>                    </a>                </h3>
                 <div class="areaImgs">
                     <div class="imgNumber imgN01 wow zoom-in" data-scroll-reveal="enter top, after 0.8s">
                         <div class="contentImg">
-                            <h3>C NATTU KIDS</h3>
-                            <p>Chứa các Bioflavonoid (Rutin và Hesperidin) bảo vệ Vitamin C khỏi bị phá hủy (Oxi hóa)</p>
+                            <h3>Vitamin C tự nhiên chứa các Bioflavonoid</h3>
+                            <p>Bảo vệ Vitamin C khỏi bị phá hủy, giúp cơ thể dễ hấp thu, giảm thải trừ</p>
                       </div>
                     </div>
                     <div class="imgNumber imgN02 wow zoom-in" data-scroll-reveal="enter bottom, after 0.8s">
                         <div class="contentImg">
-                            <h3>C NATTU KIDS</h3>
-                            <p>Giúp dễ hấp thu Vitamin C tăng hiệu quả</p>
+                            <h3>Tăng sức đề kháng hiệu quả, an toàn</h3>
+                            <p>Vitamin C tự nhiên từ Acerola cherry</p>
                       </div>
                     </div>
                     <div class="imgNumber imgN03 wow zoom-in" data-scroll-reveal="enter top, after 0.8s">
                         <div class="contentImg">
-                            <h3>C NATTU KIDS</h3>
+                            <h3>Thân thiện với đường tiêu hóa</h3>
                             <p>
-                                Thải trừ chậm kéo dài tác dụng
+                                Độ chua (pH) trung tính, thích hợp với đường tiêu hóa
                             </p>
                       </div>
                     </div>
                     <div class="imgNumber imgN04 wow zoom-in" data-scroll-reveal="enter bottom, after 0.8s">
                         <div class="contentImg">
-                            <h3>C NATTU KIDS</h3>
+                            <h3>Chống phát ban, xuất huyết, chảy máu</h3>
                             <p>
-                                Có độ chua(pH) trung tính, thích hợp với đường tiêu hóa
+                                Ngoài Vitamin C có thêm các Bioflavonoid là Rutin và Hesperidin
                             </p>
                       </div>
                     </div>
                     <div class="imgNumber imgN05 wow zoom-in" data-scroll-reveal="enter top, after 0.8s">
                         <div class="contentImgR">
-                            <h3>C NATTU KIDS</h3>
+                            <h3>Chống phát ban, xuất huyết, chảy máu</h3>
                             <p>
-                                Thơm ngon, tiện sử dụng
+                               Ngoài Vitamin C có thêm các Bioflavonoid là Rutin và Hesperidin
                             </p>
                       </div>
                     </div>
                     <div class="imgNumber imgN06 wow zoom-in" data-scroll-reveal="enter bottom, after 0.8s">
                         <div class="contentImgR">
-                            <h3>C NATTU KIDS</h3>
+                            <h3>C-Nattu Kids</h3>
                             <p>
-                                Gia tăng tác dụng chống xuất huyết, chảy máu, phát ban...
+                                Sản phẩm duy nhất về Vitamin C tự nhiên trên thị trường
                             </p>
                       </div>
                     </div>
                     <div class="imgNumber imgN07 wow zoom-in" data-scroll-reveal="enter top, after 0.8s">
                         <div class="contentImgR">
-                            <h3>C NATTU KIDS</h3>
+                            <h3>C-Nattu Kids</h3>
                             <p>
                                 100% Nguyên liệu nhập khẩu Châu Âu
                             </p>
@@ -88,8 +85,8 @@
                             <span>1</span>
                         </div>
                         <div class="contentIntro">
-                            <h3>Vitamin C</h3>
-                            <p>C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry</p>
+                            <h3>Vitamin C tự nhiên chứa các Bioflavonoid</h3>
+                            <p>Bảo vệ Vitamin C khỏi bị phá hủy, giúp cơ thể dễ hấp thu, giảm thải trừ</p>
                         </div>
                     </div>
                     <!-- //end -->
@@ -98,8 +95,8 @@
                             <span>2</span>
                         </div>
                         <div class="contentIntro">
-                            <h3>Vitamin C</h3>
-                            <p>C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry</p>
+                            <h3>Tăng sức đề kháng hiệu quả, an toàn</h3>
+                            <p>Vitamin C tự nhiên từ Acerola cherry</p>
                         </div>
                     </div>
                     <!-- //end -->
@@ -108,8 +105,8 @@
                             <span>3</span>
                         </div>
                         <div class="contentIntro">
-                            <h3>Vitamin C</h3>
-                            <p>C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry</p>
+                            <h3>Thân thiện với đường tiêu hóa</h3>
+                            <p>Độ chua (pH) trung tính, thích hợp với đường tiêu hóa</p>
                         </div>
                     </div>
                     <!-- //end -->
@@ -118,8 +115,8 @@
                             <span>4</span>
                         </div>
                         <div class="contentIntro">
-                            <h3>Vitamin C</h3>
-                            <p>C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry</p>
+                            <h3>Chống phát ban, xuất huyết, chảy máu</h3>
+                            <p>Ngoài Vitamin C có thêm các Bioflavonoid là Rutin và Hesperidin</p>
                         </div>
                     </div>
                     <!-- //end -->
@@ -128,8 +125,8 @@
                             <span>5</span>
                         </div>
                         <div class="contentIntro">
-                            <h3>Vitamin C</h3>
-                            <p>C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry</p>
+                            <h3>C-Nattu Kids</h3>
+                            <p>Sản phẩm duy nhất về Vitamin C tự nhiên trên thị trường</p>
                         </div>
                     </div>
                     <!-- //end -->
@@ -138,8 +135,8 @@
                             <span>6</span>
                         </div>
                         <div class="contentIntro">
-                            <h3>Vitamin C</h3>
-                            <p>C NATTU KIDS là sản phẩm đầu tiên sử dụng vitamin C tự nhiên từ acerola cherry</p>
+                            <h3>C-Nattu Kids</h3>
+                            <p>100% Nguyên liệu nhập khẩu Châu Âu</p>
                         </div>
                     </div>
                     <!-- //end -->
@@ -173,13 +170,10 @@
     <section class="boxSlidePage bg">
         <div class="container">
             <h3 class="globalTitle noneAfter">
-                <a href="#">Tăng
+                <a href="http://www.cnattu.vn/tang-de-khang">Tăng
                     <span class="highLight">Đề kháng</span>
           <span class="bgLight">
-            Cho cả gia đình
-          </span>
-                </a>
-            </h3>
+            Cho cả gia đình          </span>                </a>            </h3>
             <div class="listSlidePage clearFix">
                 <div class="owl-carousel" id="slidePage">
                     @foreach ($sliders as $slider)
@@ -208,8 +202,7 @@
                 <!-- /endboxRecommended -->
                 <div class="boxNews clearFix">
                     <h3 class="globalTitle">
-                        <a href="#">Tin mới nhất</a>
-                    </h3>
+                        <a href="http://www.cnattu.vn/tin-tuc" target="_blank">Tin mới nhất</a>                    </h3>
                     <div class="listNews clearFix">
                         @foreach ($latestNews as $post)
                         <div class="item">

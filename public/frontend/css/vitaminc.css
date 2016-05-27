@@ -45,7 +45,7 @@ html {
 
 body {
   font-family: "Open Sans";
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.42;
   color: #040700;
   background: #e9e9ea;
@@ -312,7 +312,7 @@ section, header, footer {
 .globalTitle a {
   color: #fff;
   background: #39b54a;
-  font-size: 14px;
+  font-size: 18px;
   display: inline-block;
   padding: 10px;
   -webkit-border-radius: 5px;
@@ -1242,14 +1242,14 @@ section, header, footer {
   margin-bottom: 10px;
   position: absolute;
   width: 100%;
-  top: -87px;
+  top: -75px;
   left: 0;
   z-index: 9;
 }
 .tabs li, .proTabs li {
   background: #a3cd39;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 18px;
   text-transform: uppercase;
   padding: 10px;
   float: left;
@@ -1257,7 +1257,7 @@ section, header, footer {
   text-align: center;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  padding: 25px 0;
+  padding: 15px 0;
   color: #006838;
 }
 .tabs li.active, .tabs li.current, .proTabs li.active, .proTabs li.current {
@@ -1515,7 +1515,7 @@ section, header, footer {
   float: left;
   background: #fff;
   padding: 10px;
-  height: 270px;
+  height: 290px;
   overflow: hidden;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;

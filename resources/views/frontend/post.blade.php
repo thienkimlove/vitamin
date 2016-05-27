@@ -24,7 +24,14 @@
                 <div class="boxLike">
                     <div class="addthis_native_toolbox"></div>
                 </div>
-
+                <div>
+                 <!-- //listButton -->
+                <ul class="listButton clearFix">
+                    <li class="ilocal"><a href="{{url('phan-phoi')}}">Xem điểm bán C Nattu</a></li>
+                    <li class="icall"><a href="{{url('lien-he')}}">1900 6482 - 0912 571 190</a></li>
+                </ul>
+				</div>
+				<br />
                 <div class="boxOrther">
                     <h3 class="globalTitle">
                         <a href="#">Tin liên quan</a>
@@ -45,7 +52,7 @@
                 <div class="boxComment">
                     <div class="fb-comments" data-href="{{url($post->slug.'.html')}}" data-numposts="5"></div>
                 </div>
-
+				
                 @foreach ($postBanners as $banner)
                 <div class="boxAdv">
                     <a href="{{$banner->url}}" title="adv">
