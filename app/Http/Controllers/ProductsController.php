@@ -17,7 +17,7 @@ class ProductsController extends AdminController
     public function __construct()
     {
         parent::__construct();
-        $this->tags = Tag::lists('name', 'name')->all();      
+        $this->tags = Tag::pluck('name', 'name')->all();
     }    
 
 

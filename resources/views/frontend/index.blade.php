@@ -13,53 +13,53 @@
                 <div class="areaImgs">
                     <div class="imgNumber imgN01 wow zoom-in" data-scroll-reveal="enter top, after 0.8s">
                         <div class="contentImg">
-                            <h3>Vitamin C tự nhiên chứa các Bioflavonoid</h3>
-                            <p>Bảo vệ Vitamin C khỏi bị phá hủy, giúp cơ thể dễ hấp thu, giảm thải trừ</p>
+                            <h3><a href="http://www.cnattu.vn/acerola-cherry-loai-qua-giau-vitamin-c-bac-nhat.html" target="_blank">Hàm lượng Vitamin C tự nhiên phong phú nhất</a></h3>
+                            <p>Acerola Cherry là loại quả giàu vitamin C bậc nhất</p>
                       </div>
                     </div>
                     <div class="imgNumber imgN02 wow zoom-in" data-scroll-reveal="enter bottom, after 0.8s">
                         <div class="contentImg">
-                            <h3>Tăng sức đề kháng hiệu quả, an toàn</h3>
-                            <p>Vitamin C tự nhiên từ Acerola cherry</p>
+                            <h3><a href="http://www.cnattu.vn/vitamin-c-tu-nhien-chia-khoa-vang-giup-tre-tang-suc-de-khang.html" target="_blank">Tăng sức đề kháng tự nhiên</a></h3>
+                            <p>Hỗ trợ miễn dịch, tăng đề kháng và phóng tránh bệnh tật</p>
                       </div>
                     </div>
                     <div class="imgNumber imgN03 wow zoom-in" data-scroll-reveal="enter top, after 0.8s">
                         <div class="contentImg">
-                            <h3>Thân thiện với đường tiêu hóa</h3>
+                            <h3><a href="http://www.cnattu.vn/me-da-bo-sung-vitamin-c-dung-cach-cho-be-chua.html" target="_blank">Thân thiện với đường tiêu hóa</a></h3>
                             <p>
-                                Độ chua (pH) trung tính, thích hợp với đường tiêu hóa
+                                Độ chua (pH) trung tính, thân thiện với đường tiêu hóa
                             </p>
                       </div>
                     </div>
                     <div class="imgNumber imgN04 wow zoom-in" data-scroll-reveal="enter bottom, after 0.8s">
                         <div class="contentImg">
-                            <h3>Chống phát ban, xuất huyết, chảy máu</h3>
+                            <h3><a href="http://www.cnattu.vn/vitamin-c-tu-nhien-bioflavonoid-cap-doi-hoan-hao-cho-suc-khoe-be-yeu.html" target="_blank">Tăng sức bền thành mạch, ngăn ngừa xuất huyết</a></h3>
                             <p>
-                                Ngoài Vitamin C có thêm các Bioflavonoid là Rutin và Hesperidin
+                                C Nattu Kids bổ sung bioflavonoid (hesperidin, rutin) bảo vệ thành mạch
                             </p>
                       </div>
                     </div>
                     <div class="imgNumber imgN05 wow zoom-in" data-scroll-reveal="enter top, after 0.8s">
                         <div class="contentImgR">
-                            <h3>Chống phát ban, xuất huyết, chảy máu</h3>
+                            <h3><a href="http://www.cnattu.vn/product/cnattu-kid" target="_blank">C Nattu kids</a></h3>
                             <p>
-                               Ngoài Vitamin C có thêm các Bioflavonoid là Rutin và Hesperidin
+                               Thơm ngon, dễ uống, đóng gói tiện sử dụng
                             </p>
                       </div>
                     </div>
                     <div class="imgNumber imgN06 wow zoom-in" data-scroll-reveal="enter bottom, after 0.8s">
                         <div class="contentImgR">
-                            <h3>C-Nattu Kids</h3>
+                            <h3><a href="http://www.cnattu.vn/product/cnattu-kid" target="_blank">Tiêu chuẩn Châu Âu</a></h3>
                             <p>
-                                Sản phẩm duy nhất về Vitamin C tự nhiên trên thị trường
+                                Nguyên liệu Châu Âu, sản xuất trên dầy chuyền GMP-WHO
                             </p>
                       </div>
                     </div>
                     <div class="imgNumber imgN07 wow zoom-in" data-scroll-reveal="enter top, after 0.8s">
                         <div class="contentImgR">
-                            <h3>C-Nattu Kids</h3>
+                            <h3><a href="http://www.cnattu.vn/vitamin-c-tu-nhien-bioflavonoid-cap-doi-hoan-hao-cho-suc-khoe-be-yeu.html" target="_blank">Tăng sức bền thành mạch, ngăn ngừa xuất huyết</a></h3>
                             <p>
-                                100% Nguyên liệu nhập khẩu Châu Âu
+                                C Nattu Kids bổ sung bioflavonoid (hesperidin, rutin) b/vệ thành mạch
                             </p>
                       </div>
                     </div>

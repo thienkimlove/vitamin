@@ -31,7 +31,7 @@
                                 <img src="{{url('img/cache/320x180/'.$post->image)}}" alt="List news" width="320" height="180">
                             </a>
                             <h3><a href="{{url($post->slug.'.html')}}">{{$post->title}}</a></h3>
-                            <span class="date">{{$post->updated_at->format('d/m/Y')}}</span> | <span class="tag">{{implode(',', $post->tags->lists('name')->all())}}</span>
+                            <span class="date">{{$post->updated_at->format('d/m/Y')}}</span> | <span class="tag">{{implode(',', $post->tags->pluck('name')->all())}}</span>
                             <p>
                               {{$post->desc}}
                             </p>

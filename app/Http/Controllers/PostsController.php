@@ -20,7 +20,7 @@ class PostsController extends AdminController
     public function __construct()
     {
         parent::__construct();
-        $this->tags = Tag::lists('name', 'name')->all();
+        $this->tags = Tag::pluck('name', 'name')->all();
         $categoryIds = [];
         $categories = Category::all();
         foreach ($categories as $cate) {
@@ -28,7 +28,7 @@ class PostsController extends AdminController
                 $categoryIds[] = $cate->id;
             }
         }
-        $this->categories = array('' => 'Choose category') +  Category::whereIn('id', $categoryIds)->lists('name', 'id')->all();
+        $this->categories = array('' => 'Choose category') +  Category::whereIn('id', $categoryIds)->pluck('name', 'id')->all();
     }
 
 
@@ -55,7 +55,7 @@ class PostsController extends AdminController
         if ($request->input('cat')) {
             $categoryId = $request->input('cat');
             $category = Category::find($categoryId);
-            $posts = ($category->subCategories->count() == 0) ? $posts->where('category_id', '=', $categoryId) : $posts->whereIn('category_id', $category->subCategories->lists('id')->all());
+            $posts = ($category->subCategories->count() == 0) ? $posts->where('category_id', '=', $categoryId) : $posts->whereIn('category_id', $category->subCategories->pluck('id')->all());
         }
 
         $posts = $posts->paginate(env('ITEM_PER_PAGE'));

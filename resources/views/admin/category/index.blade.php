@@ -29,7 +29,7 @@
                                     <td>{{ ($cate->parent_id)? 'Yes' : 'No'  }}</td>
                                     <td>
                                         <button id-attr="{{$cate->id}}" class="btn btn-primary btn-sm edit-cate" type="button">Edit</button>&nbsp;
-                                        {!! Form::open(['method' => 'DELETE', 'route' => ['admin.categories.destroy', $cate->id]]) !!}
+                                        {!! Form::open(['method' => 'DELETE', 'route' => ['categories.destroy', $cate->id]]) !!}
                                         <button type="submit" class="btn btn-danger btn-mini">Delete</button>
                                         {!! Form::close() !!}
                                     </td>

@@ -11,10 +11,10 @@
         <div class="col-lg-12">
             @if (!empty($category))
             <h2>Edit</h2>
-            {!! Form::model($category, ['method' => 'PATCH', 'route' => ['admin.categories.update', $category->id]]) !!}
+            {!! Form::model($category, ['method' => 'PATCH', 'route' => ['categories.update', $category->id]]) !!}
             @else
                 <h2>Add</h2>
-                {!! Form::model($category = new App\Category, ['route' => ['admin.categories.store']]) !!}
+                {!! Form::model($category = new App\Category, ['route' => ['categories.store']]) !!}
             @endif
 
             <div class="form-group">

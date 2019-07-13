@@ -11,10 +11,10 @@
       <div class="col-lg-6">
           @if (!empty($question))
           <h2>Sửa câu hỏi "{{ $question->question }}"</h2>
-          {!! Form::model($question, ['method' => 'PATCH', 'route' => ['admin.questions.update', $question->id], 'files' => true]) !!}
+          {!! Form::model($question, ['method' => 'PATCH', 'route' => ['questions.update', $question->id], 'files' => true]) !!}
           @else
               <h2>Thêm Hỏi Đáp</h2>
-              {!! Form::model($question = new App\Question, ['route' => ['admin.questions.store'], 'files' => true]) !!}
+              {!! Form::model($question = new App\Question, ['route' => ['questions.store'], 'files' => true]) !!}
           @endif
 
               <div class="form-group">

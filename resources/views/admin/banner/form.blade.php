@@ -13,12 +13,12 @@
             <h2>Edit</h2>
             {!! Form::model($banner, [
                 'method' => 'PATCH',
-                'route' => ['admin.banners.update', $banner->id],
+                'route' => ['banners.update', $banner->id],
                 'files' => true
              ]) !!}
             @else
                 <h2>Add</h2>
-                {!! Form::model($banner = new App\Banner, ['route' => ['admin.banners.store'], 'files' => true]) !!}
+                {!! Form::model($banner = new App\Banner, ['route' => ['banners.store'], 'files' => true]) !!}
             @endif
 
             <div class="form-group">

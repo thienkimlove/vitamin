@@ -11,10 +11,10 @@
         <div class="col-lg-12">
             @if (!empty($delivery))
             <h2>Edit</h2>
-            {!! Form::model($delivery, ['method' => 'PATCH', 'route' => ['admin.deliveries.update', $delivery->id]]) !!}
+            {!! Form::model($delivery, ['method' => 'PATCH', 'route' => ['deliveries.update', $delivery->id]]) !!}
             @else
                 <h2>Add</h2>
-                {!! Form::model($delivery = new App\Delivery, ['route' => ['admin.deliveries.store']]) !!}
+                {!! Form::model($delivery = new App\Delivery, ['route' => ['deliveries.store']]) !!}
             @endif
 
 

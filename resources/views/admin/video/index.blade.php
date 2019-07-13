@@ -35,7 +35,7 @@
                                     <td>
                                         <button id-attr="{{$video->id}}" class="btn btn-primary btn-sm edit-video"  type="button">Sửa</button>
                                         <br>
-                                        {!! Form::open(['method' => 'DELETE', 'route' => ['admin.videos.destroy', $video->id]]) !!}
+                                        {!! Form::open(['method' => 'DELETE', 'route' => ['videos.destroy', $video->id]]) !!}
                                         <button type="submit" class="btn btn-danger btn-mini"> Xoa </button>
                                         {!! Form::close() !!}
                                     </td>

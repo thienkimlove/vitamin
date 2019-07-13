@@ -1,7 +1,7 @@
-<div class="contentRight">
+﻿<div class="contentRight">
     <div class="boxVideo">
         <h3 class="globalTitle">
-            <a href="#">Góc Video</a>
+            <a href="http://www.cnattu.vn/video">Góc Video</a>
         </h3>
         @if ($featureVideos->count() > 0)
             <div class="content">
@@ -19,11 +19,11 @@
             <a href="#">Cộng đồng mẹ thông thái</a>
         </h3>
         <div class="Social">
-            <div class="fb-page" data-href="https://www.facebook.com/tuelinh.vn" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/tuelinh.vn"><a href="https://www.facebook.com/tuelinh.vn">Tuệ Linh</a></blockquote></div></div>
+            <div class="fb-page" data-href="https://www.facebook.com/cnattu.vn" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/cnattu.vn"><a href="https://www.facebook.com/cnattu.vn">Cnattu Kids</a></blockquote></div></div>
         </div>
     </div>
     <!-- /endSale -->
-    <div class="boxHot clearFix sideBar">
+    <div class="boxHot clearFix" id="sidebar">
         <h3 class="globalTitle"><a href="#">Tin nổi bật</a></h3>
         @if (isset($page) && $page == 'index')
             @foreach ($featureNews->splice(0, 2) as $post)

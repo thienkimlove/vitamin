@@ -11,10 +11,10 @@
         <div class="col-lg-6">
             @if (!empty($video))
                 <h2>Sửa media "{{ $video->title }}"</h2>
-                {!! Form::model($video, ['method' => 'PATCH', 'route' => ['admin.videos.update', $video->id], 'files' => true]) !!}
+                {!! Form::model($video, ['method' => 'PATCH', 'route' => ['videos.update', $video->id], 'files' => true]) !!}
             @else
                 <h2>Thêm Media</h2>
-                {!! Form::model($video = new App\Video, ['route' => ['admin.videos.store'], 'files' => true]) !!}
+                {!! Form::model($video = new App\Video, ['route' => ['videos.store'], 'files' => true]) !!}
             @endif
 
             <div class="form-group">

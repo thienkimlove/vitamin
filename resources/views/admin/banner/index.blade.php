@@ -33,7 +33,7 @@
                                     <td>{{ ($banner->status) ? 'Yes' : 'No'  }}</td>
                                     <td>
                                         <button id-attr="{{$banner->id}}" class="btn btn-primary btn-sm edit-banner" type="button">Edit</button>&nbsp;
-                                        {!! Form::open(['method' => 'DELETE', 'route' => ['admin.banners.destroy', $banner->id]]) !!}
+                                        {!! Form::open(['method' => 'DELETE', 'route' => ['banners.destroy', $banner->id]]) !!}
                                         <button type="submit" class="btn btn-danger btn-mini">Delete</button>
                                         {!! Form::close() !!}
                                     </td>

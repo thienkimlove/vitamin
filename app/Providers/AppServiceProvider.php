@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Setting;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -14,8 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //remove comment when finish install.
-       // view()->share('site_settings', Setting::lists('value', 'name')->all());
+        Schema::defaultStringLength(191);
     }
 
     /**

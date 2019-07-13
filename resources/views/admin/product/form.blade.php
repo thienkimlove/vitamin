@@ -13,12 +13,12 @@
             <h2>Edit</h2>
             {!! Form::model($product, [
                 'method' => 'PATCH',
-                'route' => ['admin.products.update', $product->id],
+                'route' => ['products.update', $product->id],
                 'files' => true
              ]) !!}
             @else
                 <h2>Add</h2>
-                {!! Form::model($product = new App\Product, ['route' => ['admin.products.store'], 'files' => true]) !!}
+                {!! Form::model($product = new App\Product, ['route' => ['products.store'], 'files' => true]) !!}
             @endif
 
             <div class="form-group">

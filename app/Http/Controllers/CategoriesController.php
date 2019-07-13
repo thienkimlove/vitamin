@@ -14,7 +14,7 @@ class CategoriesController extends AdminController
     public function __construct()
     {
         parent::__construct();
-        $this->parents = array('' => 'Choose parent category') + Category::whereNull('parent_id')->lists('name', 'id')->all();
+        $this->parents = array('' => 'Choose parent category') + Category::whereNull('parent_id')->pluck('name', 'id')->all();
     }
 
     public function index()

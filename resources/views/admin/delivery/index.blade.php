@@ -29,7 +29,7 @@
                                     <td>{{config('delivery')['area'][$delivery->area]}}</td>
                                     <td>
                                         <button id-attr="{{$delivery->id}}" class="btn btn-primary btn-sm edit-delivery" type="button">Edit</button>&nbsp;
-                                        {!! Form::open(['method' => 'DELETE', 'route' => ['admin.deliveries.destroy', $delivery->id]]) !!}
+                                        {!! Form::open(['method' => 'DELETE', 'route' => ['deliveries.destroy', $delivery->id]]) !!}
                                         <button type="submit" class="btn btn-danger btn-mini">Delete</button>
                                         {!! Form::close() !!}
                                     </td>

@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-lg-12">
                 <h2>Edit</h2>
-                {!! Form::model($setting, ['method' => 'PATCH', 'route' => ['admin.settings.update', $setting->id]]) !!}
+                {!! Form::model($setting, ['method' => 'PATCH', 'route' => ['settings.update', $setting->id]]) !!}
 
 
 

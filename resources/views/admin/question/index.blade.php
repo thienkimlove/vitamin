@@ -41,7 +41,7 @@
                                     <td>
                                         <button id-attr="{{$question->id}}" class="btn btn-primary btn-sm edit-question"  type="button">Sửa</button>
                                         <br>
-                                        {!! Form::open(['method' => 'DELETE', 'route' => ['admin.questions.destroy', $question->id]]) !!}
+                                        {!! Form::open(['method' => 'DELETE', 'route' => ['questions.destroy', $question->id]]) !!}
                                         <button type="submit" class="btn btn-danger btn-mini"> Xoa </button>
                                         {!! Form::close() !!}
                                     </td>

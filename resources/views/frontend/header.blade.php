@@ -19,19 +19,22 @@
 <div class="hotLine sp">
     <img src="{{url('frontend/imgs/hot.png')}}" alt="Hot">
 </div>
+	<meta property="fb:app_id" content="253971681611024" />
+	<meta property="fb:admins" content="{1704641110}"/>
+	<meta content='253971681611024' property='fb:app_id'/>
 <header class="header">
     <div class="container">
         <h1 class="clearFix">
-            <a href="#" class="logo" title="Logo">
+            <a href="http://www.cnattu.vn" class="logo" title="Logo">
                 <img src="{{url('frontend/imgs/logo.png')}}" alt="Vitamin C" width="225" height="125" class="pc">
                 <img src="{{url('frontend/imgs/logosp.png')}}" alt="Vitamin C" width="295" height="100" class="sp">
             </a>
         </h1>
         <ul id="globalNav" class="pc">
-            <li><a href="{{url('/')}}" class="active">Trang chủ</a></li>
+            <li><a href="{{url('http://www.cnattu.vn')}}" class="active">Trang chủ</a></li>
             @if ($menuProducts->count() > 0)
             <li>
-                <a href="#">Vitamin C Tự nhiên</a>
+                <a href="http://www.cnattu.vn/product/cnattu-kid">Vitamin C Tự nhiên</a>
                 <ul>
                     @foreach ($menuProducts as $product)
                     <li><a href="{{url('product/'.$product->slug)}}">{{$product->title}}</a></li>
@@ -58,7 +61,7 @@
             <li><a href="{{url('video')}}">Videos</a></li>
             <li><a href="{{url('cau-hoi-thuong-gap')}}">Hỏi đáp</a></li>
             <li><a href="{{url('lien-he')}}">Liên hệ</a></li>
-            <li><a href="{{url('phan-phoi')}}">Hệ thống phân phối</a></li>
+            <li><a href="{{url('phan-phoi')}}">Phân phối</a></li>
         </ul>
         <a href="#" title="Menu" class="sp btnMenu" id="btnMenu">Menu</a>
     </div>

@@ -1,4 +1,4 @@
-@extends('frontend')
+﻿@extends('frontend')
 
 @section('content')
     <section class="section vis">
@@ -12,7 +12,7 @@
                     <ul class="proTabs clearFix">
                         <li class="tabLink active" data-tab="tabInfo">Thông tin sản phẩm</li>
                         <li class="tabLink" data-tab="tabChoose">Nghiên cứu lâm sàng</li>
-                        <li class="tabLink" data-tab="tabRate">Người thật việc thật</li>
+                        <li class="tabLink" data-tab="tabRate">Vì sao nên chọn CNATTU</li>
                     </ul>
                     <div id="tabInfo" class="tabProduct active">
                         <div class="item clearFix">
@@ -48,7 +48,7 @@
                  <!-- //listButton -->
                 <ul class="listButton clearFix">
                     <li class="ilocal"><a href="{{url('phan-phoi')}}">Xem điểm bán C Nattu</a></li>
-                    <li class="icall"><a href="{{url('lien-he')}}">1900 6482 - 0912 571 190</a></li>
+                    <li class="icall"><a href="{{url('lien-he')}}">18001190 - 0912 571 190</a></li>
                 </ul>
 				</div>
 				<br />

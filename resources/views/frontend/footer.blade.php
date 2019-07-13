@@ -1,4 +1,4 @@
-<footer class="footer">
+﻿<footer class="footer" id="footer">
     <div class="container">
         <div class="boxFooter clearFix">
             <div class="areaSocial">
@@ -23,12 +23,27 @@
             </div>
         </div>
     </div>
+	<!-- Google Code  -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 879118448;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/879118448/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
     <div class="copyRight">
         <div class="container">
-            <p class="copy">MỌI THÔNG TIN ĐỀU BẢN QUYỀN ĐỀU THUỘC VỀ CÔNG TY TNHH TUỆ LINH</p>
+            <p class="copy">MỌI THÔNG TIN ĐỀU BẢN QUYỀN ĐỀU THUỘC VỀ CNATTU.VN </p>
             <p class="address">
-                Tầng 5, Tòa nhà 29 T1 - Hoàng Đạo Thúy - Trung Hòa - Cầu Giấy - Hà Nội- Điện thoại: (04) 62824344 - Fax: 04.62824263
-            </p>
+                Điện thoại: 18001190 - 0912 571 190 </p>
         </div>
     </div>
 </footer>

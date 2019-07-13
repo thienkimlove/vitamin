@@ -11,7 +11,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="input-group custom-search-form">
-                        {!! Form::open(['method' => 'GET', 'route' =>  ['admin.posts.index'] ]) !!}
+                        {!! Form::open(['method' => 'GET', 'route' =>  ['posts.index'] ]) !!}
                         <span class="input-group-btn">
                             <input type="text" value="{{$searchPost}}" name="q" class="form-control" placeholder="Search post..">
 
@@ -52,7 +52,7 @@
                                     <td>{{ ($post->status) ? 'Yes' : 'No'  }}</td>
                                     <td>
                                         <button id-attr="{{$post->id}}" class="btn btn-primary btn-sm edit-post" type="button">Edit</button>&nbsp;
-                                        {!! Form::open(['method' => 'DELETE', 'route' => ['admin.posts.destroy', $post->id]]) !!}
+                                        {!! Form::open(['method' => 'DELETE', 'route' => ['posts.destroy', $post->id]]) !!}
                                         <button type="submit" class="btn btn-danger btn-mini">Delete</button>
                                         {!! Form::close() !!}
                                     </td>

@@ -36,7 +36,6 @@ p {
 
 strong {
   font-size: 16px;
-  display: block;
 }
 
 html {
@@ -113,7 +112,7 @@ table {
 img {
   max-width: 100%;
   height: auto;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 /* Mixin */
@@ -364,9 +363,14 @@ section, header, footer {
   text-indent: -9090px;
 }
 
-#sideBar {
+#sidebar {
+  width: 300px;
   position: absolute;
-  right: 0;
+}
+
+#sidebar.fixed {
+  position: fixed;
+  top: 100px;
 }
 
 .sidebar {
@@ -505,6 +509,7 @@ section, header, footer {
 }
 .boxIntro .imgNumber {
   position: absolute;
+  z-index: 999;
 }
 .boxIntro .imgNumber.imgN01 {
   background: url("../imgs/bg/num01.png") no-repeat;
@@ -1242,14 +1247,14 @@ section, header, footer {
   margin-bottom: 10px;
   position: absolute;
   width: 100%;
-  top: -75px;
+  top: -69px;
   left: 0;
   z-index: 9;
 }
 .tabs li, .proTabs li {
   background: #a3cd39;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 14px;
   text-transform: uppercase;
   padding: 10px;
   float: left;
@@ -1314,6 +1319,13 @@ section, header, footer {
 .boxProducts .proTabs li, .boxDetails .proTabs li {
   width: 30%;
   margin-right: 2.5%;
+}
+
+.boxDetails {
+  line-height: 22px;
+}
+.boxDetails ul {
+  padding-left: 25px;
 }
 
 .boxMedia .thumbVideo {
@@ -1999,6 +2011,11 @@ section, header, footer {
 @media only screen and (max-width: 480px) {
   .boxBanner {
     /* display: none; */
+  }
+
+  #sidebar, #sidebar.fixed {
+    position: relative !important;
+    top: 0 !important;
   }
 
   .boxNews .listNews .thumb {

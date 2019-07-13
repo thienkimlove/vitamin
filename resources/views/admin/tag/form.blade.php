@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h2>Edit</h2>
-            {!! Form::model($tag, ['method' => 'PATCH', 'route' => ['admin.tags.update', $tag->id]]) !!}
+            {!! Form::model($tag, ['method' => 'PATCH', 'route' => ['tags.update', $tag->id]]) !!}
 
             <div class="form-group">
                 {!! Form::label('name', 'Name') !!}
